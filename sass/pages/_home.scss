@@ -1,1 +1,8 @@
-
+#location{
+    background-color: $platinum;
+    height: 60px;
+    @include display-center;
+    i{
+        
+    }
+}

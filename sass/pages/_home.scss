@@ -31,11 +31,15 @@ i{
 }
 
 #functionning{
+    padding: 40px 20px;
+    width: 100%;
     ol{
         counter-reset: my-counter;
  padding: 20px;
  display: flex;
- flex-direction: row wrap;
+flex-direction: row wrap;
+gap: 20px;
+
 li{
     display: flex;
     flex-basis: 100%;
@@ -45,11 +49,20 @@ li{
     border-radius: 25px;
     align-items: center;
     counter-increment: my-counter;
+    font-size: 1.3em;
 
     &::before{
         content: counter(my-counter);
         display: flex;
         @include display-center;
+        min-height: 30px;
+        min-width: 30px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        color: $white;
+        margin-right: 30px;
+        position: relative;
+        right: 15px;
     }
 }
 

@@ -37,7 +37,7 @@ i{
         counter-reset: my-counter;
  padding: 20px;
  display: flex;
-flex-direction: row wrap;
+flex-flow: row wrap;
 gap: 20px;
 
 li{
@@ -49,8 +49,9 @@ li{
     border-radius: 25px;
     align-items: center;
     counter-increment: my-counter;
-    font-size: 1.3em;
-
+    font-size: 1.4em;
+    font-weight:500;
+    @include shadow($ab-grey, 5%);
     &::before{
         content: counter(my-counter);
         display: flex;
@@ -60,12 +61,38 @@ li{
         background-color: $primary-color;
         border-radius: 50%;
         color: $white;
-        margin-right: 30px;
+        margin-right: 20px;
         position: relative;
         right: 15px;
     }
+    i {
+        color:$ab-text-grey;
+        font-size: 1.3em;
+        margin-right: 30px;
+    }
+}      
 }
-
-       
+}
+#restaurants{
+background-color:$ab-grey;
+padding: 50px 20px;
+article{
+    width:100%;
+    figure{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        @include shadow($ab-grey, 5%);
+    border-radius: 15px;
+        image{
+            object-fit: cover;
+            height:200px;
+            width:100%;
+        }
+        figcaption{
+            height: 50px;
+            background-color: $white;
+        }
+    }
 }
 }

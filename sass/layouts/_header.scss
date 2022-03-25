@@ -1,4 +1,5 @@
 header{
+    display: flex;
    @include display-center;
     height: 75px;
     img{

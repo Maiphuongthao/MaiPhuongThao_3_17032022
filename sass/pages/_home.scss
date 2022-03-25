@@ -1,8 +1,58 @@
 #location{
-    background-color: $platinum;
-    height: 60px;
+    display: flex;
+    background-color: $lo-grey;
+    height: 65px;
     @include display-center;
-    i{
-        
+    box-shadow:0 3px 3px inset darken($lo-grey, 10%);
+    p{
+font-weight:500;
+font-size: 1.3em;
+color:$lo-text-grey;
+i{
+    padding-right: 20px;
+}
     }
+}
+
+#about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   padding: 40px;
+   background-color:$ab-grey;
+   width: 100%;
+   p{
+       font-size: 1.6em;
+       line-height: 1.1em;
+       color:$ab-text-grey;
+       font-weight:300;
+   }
+}
+
+#functionning{
+    ol{
+        counter-reset: my-counter;
+ padding: 20px;
+ display: flex;
+ flex-direction: row wrap;
+li{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    height: 75px;
+    background:$ab-grey;
+    border-radius: 25px;
+    align-items: center;
+    counter-increment: my-counter;
+
+    &::before{
+        content: counter(my-counter);
+        display: flex;
+        @include display-center;
+    }
+}
+
+       
+}
 }

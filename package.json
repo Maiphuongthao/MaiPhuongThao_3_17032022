@@ -4,7 +4,8 @@
   "description": "Ohmyfood",
   "main": "index.js",
   "scripts": {
-   "sass": "sass --watch ./sass/main.scss public/css/style.css --style compressed"
+    "sass": "sass --watch ./assets/sass/main.scss public/css/style.css",
+    "start": "sass ./assets/sass/main.scss public/css/style.css --style compressed"
   },
   "repository": {
     "type": "git",

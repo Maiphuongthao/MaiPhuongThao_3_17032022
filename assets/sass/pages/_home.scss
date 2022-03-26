@@ -1,55 +1,51 @@
 #location{
     display: flex;
     background-color: $lo-grey;
-    height: 65px;
+    height: 60px;
     @include display-center;
     box-shadow:0 3px 3px inset darken($lo-grey, 10%);
     p{
 font-weight:500;
-font-size: 1.3em;
+font-size: $tel-text-size;
 color:$lo-text-grey;
 i{
-    padding-right: 20px;
+    padding-right: 15px;
 }
     }
 }
 
 #about-us{
     display: flex;
+   text-align: center;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-   padding: 40px;
+    align-items:center;
    background-color:$ab-grey;
-   width: 100%;
+   h1{
+       margin:40px 20px 20px;
+   }
    p{
-       font-size: 1.6em;
-       line-height: 1.1em;
+       font-size: $tel-text-size;
        color:$ab-text-grey;
        font-weight:300;
    }
 }
 
 #functionning{
-    padding: 40px 20px;
-    width: 100%;
     ol{
         counter-reset: my-counter;
- padding: 20px;
  display: flex;
-flex-flow: row wrap;
+flex-direction: column;
 gap: 20px;
 
 li{
     display: flex;
-    flex-basis: 100%;
     align-items: center;
-    height: 75px;
+    height:70px;
     background:$ab-grey;
     border-radius: 25px;
     align-items: center;
     counter-increment: my-counter;
-    font-size: 1.4em;
     font-weight:500;
     @include shadow($ab-grey, 5%);
     &::before{
@@ -74,6 +70,8 @@ li{
 }
 }
 #restaurants{
+    display: flex;
+    flex-direction: column;
 background-color:$ab-grey;
 padding: 50px 20px;
 article{

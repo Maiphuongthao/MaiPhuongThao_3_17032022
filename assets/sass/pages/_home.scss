@@ -32,13 +32,16 @@ i{
 }
 
 #functionning{
+padding: 40px 20px;
+
     ol{
         counter-reset: my-counter;
  display: flex;
 flex-direction: column;
-gap: 20px;
 
 li{
+  margin-left: 10px;
+  margin-bottom: 25px;
     display: flex;
     align-items: center;
     height:70px;
@@ -47,7 +50,7 @@ li{
     align-items: center;
     counter-increment: my-counter;
     font-weight:500;
-    @include shadow($ab-grey, 5%);
+    @include shadow($ab-grey, 2%);
     &::before{
         content: counter(my-counter);
         display: flex;
@@ -57,39 +60,60 @@ li{
         background-color: $primary-color;
         border-radius: 50%;
         color: $white;
-        margin-right: 20px;
+        margin-right: 10px;
         position: relative;
         right: 15px;
     }
+    &:hover{
+        background-color:$fun-box-lilas;
+        & > i:hover{
+            color:$primary-color; /* a voir avec coleur icon qui change color*/
+        }
+    }
     i {
         color:$ab-text-grey;
-        font-size: 1.3em;
-        margin-right: 30px;
+        font-size: $tel-text-size;
+        margin-right: 20px;
+        
     }
 }      
 }
 }
 #restaurants{
-    display: flex;
-    flex-direction: column;
 background-color:$ab-grey;
-padding: 50px 20px;
+padding: 40px 20px;
 article{
     width:100%;
+    margin-bottom: 25px;
     figure{
         width:100%;
         display:flex;
         flex-direction: column;
         @include shadow($ab-grey, 5%);
-    border-radius: 15px;
-        image{
+        border-radius: 15px;
+        background-color:$white;
+        span{
+            position: absolute;
+            right: 25px;
+            background-color:$tertiary-color;
+        }
+        img{
             object-fit: cover;
-            height:180px;
+            max-height: 150px;
             width:100%;
+            border-radius: 18px 18px 0 0;
+            object-position: 50% 63%;
         }
         figcaption{
             height: 70px;
-            background-color: $white;
+            margin-top:20px;
+            margin-left: 15px;
+            p{
+                font-weight: 300;
+                color:$ab-text-grey;
+                line-height: 1.5em;
+                font-size:$tel-text-size;
+            }
         }
     }
 }

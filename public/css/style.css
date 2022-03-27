@@ -412,6 +412,10 @@ h1, h2 {
   font-size: 1.5em;
 }
 
+h2 {
+  margin-bottom: 25px;
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -434,6 +438,11 @@ h3 {
   justify-content: center;
   align-items: center;
   background: linear-gradient(170deg, #FF79DA 10%, #9356DC);
+}
+
+.hearts {
+  background-color: #fff;
+  position: relative;
 }
 
 header {
@@ -480,13 +489,17 @@ header img {
   font-weight: 300;
 }
 
+#functionning {
+  padding: 40px 20px;
+}
 #functionning ol {
   counter-reset: my-counter;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 #functionning ol li {
+  margin-left: 10px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
   height: 70px;
@@ -495,7 +508,7 @@ header img {
   align-items: center;
   counter-increment: my-counter;
   font-weight: 500;
-  box-shadow: 2px 5px 5px 5px #e9e9e9;
+  box-shadow: 2px 5px 5px 5px #f1f1f1;
 }
 #functionning ol li::before {
   content: counter(my-counter);
@@ -507,24 +520,30 @@ header img {
   background-color: #9356DC;
   border-radius: 50%;
   color: #fff;
-  margin-right: 20px;
+  margin-right: 10px;
   position: relative;
   right: 15px;
 }
+#functionning ol li:hover {
+  background-color: #F5ECFF;
+}
+#functionning ol li:hover > i:hover {
+  color: #9356DC;
+  /* a voir avec coleur icon qui change color*/
+}
 #functionning ol li i {
   color: #7E7E7E;
-  font-size: 1.3em;
-  margin-right: 30px;
+  font-size: 1.1em;
+  margin-right: 20px;
 }
 
 #restaurants {
-  display: flex;
-  flex-direction: column;
   background-color: #F6F6F6;
-  padding: 50px 20px;
+  padding: 40px 20px;
 }
 #restaurants article {
   width: 100%;
+  margin-bottom: 25px;
 }
 #restaurants article figure {
   width: 100%;
@@ -532,15 +551,30 @@ header img {
   flex-direction: column;
   box-shadow: 2px 5px 5px 5px #e9e9e9;
   border-radius: 15px;
+  background-color: #fff;
 }
-#restaurants article figure image {
+#restaurants article figure span {
+  position: absolute;
+  right: 25px;
+  background-color: #99E2D0;
+}
+#restaurants article figure img {
   object-fit: cover;
-  height: 180px;
+  max-height: 150px;
   width: 100%;
+  border-radius: 18px 18px 0 0;
+  object-position: 50% 63%;
 }
 #restaurants article figure figcaption {
   height: 70px;
-  background-color: #fff;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+#restaurants article figure figcaption p {
+  font-weight: 300;
+  color: #7E7E7E;
+  line-height: 1.5em;
+  font-size: 1.1em;
 }
 
 /*# sourceMappingURL=style.css.map */

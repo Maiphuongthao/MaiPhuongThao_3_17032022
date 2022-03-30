@@ -4,5 +4,5 @@
 }
 
 @mixin shadow($color, $percent){
-    box-shadow:2px 5px 5px 5px darken($color, $percent);
+    box-shadow:2px 5px 5px 2px darken($color, $percent);
 }

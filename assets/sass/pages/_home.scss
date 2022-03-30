@@ -50,7 +50,7 @@ li{
     align-items: center;
     counter-increment: my-counter;
     font-weight:500;
-    @include shadow($ab-grey, 2%);
+    @include shadow($ab-grey, 3%);
     &::before{
         content: counter(my-counter);
         display: flex;
@@ -66,8 +66,8 @@ li{
     }
     &:hover{
         background-color:$fun-box-lilas;
-        & > i:hover{
-            color:$primary-color; /* a voir avec coleur icon qui change color*/
+        & > i{
+            color:$primary-color;
         }
     }
     i {

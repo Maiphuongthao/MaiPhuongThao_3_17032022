@@ -1,4 +1,8 @@
-.fa-heart-motion{
+.hearts{
     background-color: $white;
-    position: relative;
+    position: absolute;
+    right:25px;
+    bottom: 25px;
+    font-size:1.3em;
+  color:$ab-text-grey;
 }

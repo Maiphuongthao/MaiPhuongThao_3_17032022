@@ -81,7 +81,7 @@ li{
 }
 #restaurants{
 background-color:$ab-grey;
-padding: 40px 20px;
+padding: 30px 20px;
 
 article{
     width:100%;
@@ -100,8 +100,6 @@ article{
     top:15px;
     padding:8px 10px;
   color:$new-text;
-  font-weight:500;
-  font-size:0.9em;
             background-color:$tertiary-color;
         }
         img{
@@ -109,14 +107,14 @@ article{
             max-height: 150px;
             width:100%;
             border-radius: 18px 18px 0 0;
-            object-position: 50% 63%;
+            object-position: 50% 60%;
         }
         figcaption{
-            height: 70px;
+            height: 60px;
             margin-top:20px;
             margin-left: 15px;
             p{
-                font-weight: 300;
+                font-weight: 400;
                 color:$ab-text-grey;
                 line-height: 1.5em;
                 font-size:$tel-text-size;

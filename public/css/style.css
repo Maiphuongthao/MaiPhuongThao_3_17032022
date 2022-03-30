@@ -440,9 +440,13 @@ h3 {
   background: linear-gradient(170deg, #FF79DA 10%, #9356DC);
 }
 
-.fa-heart-motion {
+.hearts {
   background-color: #fff;
-  position: relative;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  font-size: 1.3em;
+  color: #7E7E7E;
 }
 
 header {
@@ -568,7 +572,7 @@ footer nav ul li a i {
 
 #restaurants {
   background-color: #F6F6F6;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 #restaurants article {
   width: 100%;
@@ -589,8 +593,6 @@ footer nav ul li a i {
   top: 15px;
   padding: 8px 10px;
   color: #1F9577;
-  font-weight: 500;
-  font-size: 0.9em;
   background-color: #99E2D0;
 }
 #restaurants article figure img {
@@ -598,15 +600,15 @@ footer nav ul li a i {
   max-height: 150px;
   width: 100%;
   border-radius: 18px 18px 0 0;
-  object-position: 50% 63%;
+  object-position: 50% 60%;
 }
 #restaurants article figure figcaption {
-  height: 70px;
+  height: 60px;
   margin-top: 20px;
   margin-left: 15px;
 }
 #restaurants article figure figcaption p {
-  font-weight: 300;
+  font-weight: 400;
   color: #7E7E7E;
   line-height: 1.5em;
   font-size: 1.1em;

@@ -82,9 +82,11 @@ li{
 #restaurants{
 background-color:$ab-grey;
 padding: 40px 20px;
+
 article{
     width:100%;
     margin-bottom: 25px;
+    position:relative;
     figure{
         width:100%;
         display:flex;
@@ -92,9 +94,14 @@ article{
         @include shadow($ab-grey, 5%);
         border-radius: 15px;
         background-color:$white;
-        span{
-            position: absolute;
-            right: 25px;
+        span:first-child{
+            position:absolute;
+            right: 15px;
+    top:15px;
+    padding:8px 10px;
+  color:$new-text;
+  font-weight:500;
+  font-size:0.9em;
             background-color:$tertiary-color;
         }
         img{

@@ -435,9 +435,14 @@ h3 {
   color: #fff;
   font-weight: 500;
   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(170deg, #FF79DA 10%, #9356DC);
+}
+.btn:hover {
+  box-shadow: 2px 5px 5px 2px #d0d0d0;
+  opacity: 85%;
 }
 
 .hearts {
@@ -450,6 +455,7 @@ h3 {
 }
 
 header {
+  display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,9 +495,9 @@ footer nav ul li a i {
 }
 
 #location {
-  display: flex;
   background-color: #EAEAEA;
   height: 60px;
+  display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 3px inset #d1d1d1;
@@ -509,7 +515,6 @@ footer nav ul li a i {
   display: flex;
   text-align: center;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   background-color: #F6F6F6;
 }
@@ -524,11 +529,32 @@ footer nav ul li a i {
 
 #functionning {
   padding: 40px 20px;
+  width: 100%;
 }
 #functionning ol {
   counter-reset: my-counter;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #functionning ol {
+    padding: 0 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #functionning ol {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 30px 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #functionning ol {
+    max-width: 1180px;
+  }
 }
 #functionning ol li {
   margin-left: 10px;
@@ -536,12 +562,13 @@ footer nav ul li a i {
   display: flex;
   align-items: center;
   height: 70px;
+  width: 100%;
   background: #F6F6F6;
   border-radius: 25px;
   align-items: center;
   counter-increment: my-counter;
   font-weight: 500;
-  box-shadow: 2px 5px 5px 2px #eeeeee;
+  box-shadow: 2px 5px 5px 2px #f1f1f1;
 }
 #functionning ol li::before {
   content: counter(my-counter);
@@ -559,6 +586,7 @@ footer nav ul li a i {
 }
 #functionning ol li:hover {
   background-color: #F5ECFF;
+  box-shadow: 2px 5px 5px 2px #e9e9e9;
 }
 #functionning ol li:hover > i {
   color: #9356DC;
@@ -571,12 +599,23 @@ footer nav ul li a i {
 
 #restaurants {
   background-color: #F6F6F6;
-  padding: 30px 20px;
+  padding: 50px 20px;
+}
+@media screen and (min-width: 992px) {
+  #restaurants {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1180px;
+    justify-content: space-between;
+  }
+}
+#restaurants h2 {
+  flex-basis: 100%;
 }
 #restaurants article {
-  width: 100%;
   margin-bottom: 25px;
   position: relative;
+  flex-basis: 49%;
 }
 #restaurants article figure {
   width: 100%;
@@ -596,10 +635,15 @@ footer nav ul li a i {
 }
 #restaurants article figure img {
   object-fit: cover;
-  max-height: 150px;
+  height: 150px;
   width: 100%;
   border-radius: 18px 18px 0 0;
   object-position: 50% 60%;
+}
+@media screen and (min-width: 768px) {
+  #restaurants article figure img {
+    height: 200px;
+  }
 }
 #restaurants article figure figcaption {
   height: 60px;

@@ -1,5 +1,4 @@
 #location{
-    display: flex;
     background-color: $lo-grey;
     height: 60px;
     @include display-center;
@@ -18,7 +17,6 @@ i{
     display: flex;
    text-align: center;
     flex-direction: column;
-    text-align: center;
     align-items:center;
    background-color:$ab-grey;
    h1{
@@ -33,11 +31,25 @@ i{
 
 #functionning{
 padding: 40px 20px;
-
+width: 100%;
     ol{
         counter-reset: my-counter;
  display: flex;
 flex-direction: column;
+@include media($bp-tel, $bp-tablet){
+    padding: 0 50px;
+}
+@include media-min($bp-tablet){
+   flex-direction: row;
+   justify-content: space-between;
+   gap:20px;
+   align-items: center;
+  width: 100%;
+  padding: 30px 10px;
+}
+@include media-min($bp-desktop){
+    max-width:$max-width;
+}
 
 li{
   margin-left: 10px;
@@ -45,15 +57,15 @@ li{
     display: flex;
     align-items: center;
     height:70px;
+    width:100%;
     background:$ab-grey;
     border-radius: 25px;
     align-items: center;
     counter-increment: my-counter;
     font-weight:500;
-    @include shadow($ab-grey, 3%);
+    @include shadow($ab-grey, 2%);
     &::before{
         content: counter(my-counter);
-        display: flex;
         @include display-center;
         min-height: 30px;
         min-width: 30px;
@@ -66,6 +78,7 @@ li{
     }
     &:hover{
         background-color:$fun-box-lilas;
+        @include shadow($ab-grey,5%);
         & > i{
             color:$primary-color;
         }
@@ -74,19 +87,26 @@ li{
         color:$ab-text-grey;
         font-size: $tel-text-size;
         margin-right: 20px;
-        
     }
 }      
 }
 }
 #restaurants{
 background-color:$ab-grey;
-padding: 30px 20px;
-
+padding: 50px 20px;
+@include media-min($bp-desktop){
+    display:flex;
+    flex-flow: row wrap;
+    max-width:$max-width;
+  justify-content:space-between;
+}
+h2{
+    flex-basis:100%
+}
 article{
-    width:100%;
     margin-bottom: 25px;
     position:relative;
+flex-basis: 49%;
     figure{
         width:100%;
         display:flex;
@@ -104,10 +124,13 @@ article{
         }
         img{
             object-fit: cover;
-            max-height: 150px;
+            height: 150px;
             width:100%;
             border-radius: 18px 18px 0 0;
             object-position: 50% 60%;
+            @include media-min($bp-tablet){
+                height:200px;
+            }
         }
         figcaption{
             height: 60px;

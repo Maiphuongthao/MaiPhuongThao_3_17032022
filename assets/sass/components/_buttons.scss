@@ -10,4 +10,8 @@
     display: flex;
     @include display-center;
     background: linear-gradient(170deg,$secondary-color 10%, $primary-color);
+    &:hover{
+        @include shadow($ab-grey,15%);
+       opacity:85%;
+    }
 }

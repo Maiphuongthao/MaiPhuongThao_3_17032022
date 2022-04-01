@@ -1,8 +1,8 @@
-header{
-    display: flex;
-   @include display-center;
-    height: 75px;
-    img{
-    height:30px;
-    }
+header {
+  display: flex;
+  @include display-center;
+  height: 75px;
+  img {
+    height: 30px;
+  }
 }

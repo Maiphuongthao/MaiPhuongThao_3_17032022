@@ -1,70 +1,69 @@
-#location{
-    background-color: $grey;
-    height: 60px;
-    @include display-center;
-    box-shadow:0 3px 3px inset darken($grey, 10%);
-    p{
-font-weight:500;
-font-size: $tel-text-size;
-color:$light-black;
-i{
-    padding-right: 15px;
-}
+#location {
+  background-color: $grey;
+  height: 60px;
+  @include display-center;
+  box-shadow: 0 3px 3px inset darken($grey, 10%);
+  p {
+    font-weight: 500;
+    font-size: $tel-text-size;
+    color: $light-black;
+    i {
+      padding-right: 15px;
     }
+  }
 }
 
-#about-us{
-    display: flex;
-   text-align: center;
-    flex-direction: column;
-    align-items:center;
-   background-color:$light-grey;
-   h1{
-       margin:40px 20px 20px;
-   }
-   p{
-       font-size: $tel-text-size;
-       font-weight:300;
-   }
+#about-us {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: $light-grey;
+  h1 {
+    margin: 40px 20px 20px;
+  }
+  p {
+    font-size: $tel-text-size;
+    font-weight: 300;
+  }
 }
 
-#functionning{
-padding: 40px 20px;
-width: 100%;
-@include media-min($bp-desktop-max){
-    @include margin-destop-max;
-}
-    ol{
-        counter-reset: my-counter;
- display: flex;
-flex-direction: column;
-@include media($bp-tel, $bp-tablet){
-    padding: 0 50px;
-}
-@include media-min($bp-tablet){
-   flex-direction: row;
-   justify-content: space-between;
-   gap:20px;
-   align-items: center;
+#functionning {
+  padding: 40px 20px;
   width: 100%;
-  padding: 30px 10px;
-}
-
-
-li{
-  margin-left: 10px;
-  margin-bottom: 25px;
+  @include media-min($bp-desktop-max) {
+    @include margin-destop-max;
+  }
+  ol {
+    counter-reset: my-counter;
     display: flex;
-    align-items: center;
-    height:70px;
-    width:100%;
-    background:$light-grey;
-    border-radius: 25px;
-    align-items: center;
-    counter-increment: my-counter;
-    font-weight:500;
-    @include shadow($light-grey, 2%);
-    &::before{
+    flex-direction: column;
+    @include media($bp-tel, $bp-tablet) {
+      padding: 0 50px;
+    }
+    @include media-min($bp-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+      padding: 30px 10px;
+    }
+
+    li {
+      margin-left: 10px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      height: 70px;
+      width: 100%;
+      background: $light-grey;
+      border-radius: 25px;
+      align-items: center;
+      counter-increment: my-counter;
+      font-weight: 500;
+      @include shadow($light-grey, 2%);
+      &::before {
         content: counter(my-counter);
         @include display-center;
         min-height: 30px;
@@ -75,75 +74,79 @@ li{
         margin-right: 10px;
         position: relative;
         right: 15px;
-    }
-    &:hover{
-        background-color:$lilas;
-        @include shadow($light-grey,4%);
-        & > i{
-            color:$primary-color;
+      }
+      &:hover {
+        background-color: $lilas;
+        @include shadow($light-grey, 4%);
+        & > i {
+          color: $primary-color;
         }
-    }
-    i {
-        color:$mid-grey;
+      }
+      i {
+        color: $mid-grey;
         font-size: $tel-text-size;
         margin-right: 20px;
+      }
     }
-}      
+  }
 }
-}
-#restaurants{
-background-color:$light-grey;
-padding: 50px 20px;
-@include media-min($bp-desktop){
-    display:flex;
+#restaurants {
+  background-color: $light-grey;
+  padding: 50px 20px;
+  @include media-min($bp-desktop) {
+    display: flex;
     flex-flow: row wrap;
-  justify-content:space-between;
-}
-@include media-min($bp-desktop-max){
-@include margin-destop-max;
-}
-h2{
-    flex-basis:100%
-}
-article{
+    justify-content: space-between;
+  }
+  @include media-min($bp-desktop-max) {
+    @include margin-destop-max;
+  }
+  h2 {
+    flex-basis: 100%;
+  }
+  article {
     margin-bottom: 25px;
-    position:relative;
-    @include media-min($bp-desktop){
-flex-basis: 49%;}
-    figure{
-        width:100%;
-        display:flex;
-        flex-direction: column;
-        @include shadow($light-grey, 4%);
-        border-radius: 15px;
-        background-color:$white;
-        span:first-child{
-            position:absolute;
-            right: 15px;
-    top:15px;
-    padding:8px 10px;
-  color:$new-text;
-            background-color:$tertiary-color;
-        }
-        img{
-            object-fit: cover;
-            height: 150px;
-            width:100%;
-            border-radius: 18px 18px 0 0;
-            object-position: 50% 60%;
-            @include media-min($bp-tablet){
-                height:200px;
-            }
-        }
-        figcaption{
-            height: 60px;
-            margin-top:20px;
-            margin-left: 15px;
-            p{
-                font-weight: 300;
-                line-height: 1.5em;
-            }
-        }
+    position: relative;
+    @include media-min($bp-desktop) {
+      flex-basis: 49%;
     }
-}
+    figure {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      @include shadow($light-grey, 4%);
+      border-radius: 15px;
+      background-color: $white;
+      span:first-child {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        padding: 6px 13px;
+        color: $new-text;
+        background-color: $tertiary-color;
+        font-size: 0.9em;
+        font-weight: 500;
+        border-radius: 3px;
+      }
+      img {
+        object-fit: cover;
+        height: 150px;
+        width: 100%;
+        border-radius: 18px 18px 0 0;
+        object-position: 50% 60%;
+        @include media-min($bp-tablet) {
+          height: 200px;
+        }
+      }
+      figcaption {
+        height: 60px;
+        margin-top: 20px;
+        margin-left: 15px;
+        p {
+          font-weight: 300;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
 }

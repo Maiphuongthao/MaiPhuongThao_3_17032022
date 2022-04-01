@@ -31,6 +31,9 @@ i{
 #functionning{
 padding: 40px 20px;
 width: 100%;
+@include media-min($bp-desktop-max){
+    @include margin-destop-max;
+}
     ol{
         counter-reset: my-counter;
  display: flex;
@@ -46,9 +49,7 @@ flex-direction: column;
   width: 100%;
   padding: 30px 10px;
 }
-@include media-min($bp-desktop){
-    max-width:$max-width;
-}
+
 
 li{
   margin-left: 10px;
@@ -96,8 +97,10 @@ padding: 50px 20px;
 @include media-min($bp-desktop){
     display:flex;
     flex-flow: row wrap;
-    max-width:$max-width;
   justify-content:space-between;
+}
+@include media-min($bp-desktop-max){
+@include margin-destop-max;
 }
 h2{
     flex-basis:100%
@@ -137,9 +140,8 @@ flex-basis: 49%;}
             margin-top:20px;
             margin-left: 15px;
             p{
-                font-weight: 400;
+                font-weight: 300;
                 line-height: 1.5em;
-                font-size:$tel-text-size;
             }
         }
     }

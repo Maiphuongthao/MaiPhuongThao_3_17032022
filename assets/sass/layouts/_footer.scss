@@ -3,6 +3,9 @@ footer{
     color:$white;
     padding: 30px;
 nav{
+    @include media-min($bp-desktop-max){
+        @include margin-destop-max;
+    }
     h3{
         font-family: 'Shrikhand', cursive;
     }
@@ -12,17 +15,13 @@ margin: 20px 0;
 line-height: 1.6em;
 li{
     font-size:$tel-text-size;
-    &:nth-child(3), &:nth-child(4){
-font-weight:300;}
-&:nth-child(2) i{
-    font-size:0.7em;
 } 
     a{
         color: $white;
         i{
             margin-right: 10px;
-            
+            width: 18px;
         }
     }
 }
-    }}}
+    }}

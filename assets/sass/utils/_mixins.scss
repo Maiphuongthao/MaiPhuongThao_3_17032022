@@ -4,6 +4,11 @@
     align-items:center;
 }
 
+@mixin margin-destop-max{
+max-width: $max-width;
+margin: 0 auto;
+}
+
 @mixin shadow($color, $percent){
     box-shadow:0px 5px 7px darken($color, $percent);
 }

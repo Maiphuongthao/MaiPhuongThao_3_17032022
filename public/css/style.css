@@ -451,7 +451,7 @@ h3 {
   right: 25px;
   bottom: 25px;
   font-size: 1.3em;
-  color: #7E7E7E;
+  color: #000;
 }
 
 header {
@@ -523,7 +523,6 @@ footer nav ul li a i {
 }
 #about-us p {
   font-size: 1.1em;
-  color: #7E7E7E;
   font-weight: 300;
 }
 
@@ -615,7 +614,11 @@ footer nav ul li a i {
 #restaurants article {
   margin-bottom: 25px;
   position: relative;
-  flex-basis: 49%;
+}
+@media screen and (min-width: 992px) {
+  #restaurants article {
+    flex-basis: 49%;
+  }
 }
 #restaurants article figure {
   width: 100%;
@@ -652,7 +655,6 @@ footer nav ul li a i {
 }
 #restaurants article figure figcaption p {
   font-weight: 400;
-  color: #7E7E7E;
   line-height: 1.5em;
   font-size: 1.1em;
 }

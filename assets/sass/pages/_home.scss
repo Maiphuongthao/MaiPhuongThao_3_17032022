@@ -31,7 +31,7 @@
 #functionning {
   padding: 40px 20px;
   width: 100%;
-  @include media-min($bp-desktop-max) {
+  @include media-min($bp-desktop) {
     @include margin-destop-max;
   }
   ol {
@@ -92,59 +92,59 @@
 }
 #restaurants {
   background-color: $light-grey;
-  padding: 50px 20px;
-  @include media-min($bp-desktop) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-  @include media-min($bp-desktop-max) {
-    @include margin-destop-max;
-  }
-  h2 {
-    flex-basis: 100%;
-  }
-  article {
-    margin-bottom: 25px;
-    position: relative;
+  div {
+    padding: 50px 20px;
     @include media-min($bp-desktop) {
-      flex-basis: 49%;
-    }
-    figure {
-      width: 100%;
       display: flex;
-      flex-direction: column;
-      @include shadow($light-grey, 4%);
-      border-radius: 15px;
-      background-color: $white;
-      span:first-child {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        padding: 6px 13px;
-        color: $new-text;
-        background-color: $tertiary-color;
-        font-size: 0.9em;
-        font-weight: 500;
-        border-radius: 3px;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      @include margin-destop-max;
+    }
+    h2 {
+      flex-basis: 100%;
+    }
+    article {
+      margin-bottom: 25px;
+      position: relative;
+      @include media-min($bp-desktop) {
+        flex-basis: 49%;
       }
-      img {
-        object-fit: cover;
-        height: 150px;
+      figure {
         width: 100%;
-        border-radius: 18px 18px 0 0;
-        object-position: 50% 60%;
-        @include media-min($bp-tablet) {
-          height: 200px;
+        display: flex;
+        flex-direction: column;
+        @include shadow($light-grey, 4%);
+        border-radius: 15px;
+        background-color: $white;
+        span:first-child {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          padding: 6px 13px;
+          color: $new-text;
+          background-color: $tertiary-color;
+          font-size: 0.9em;
+          font-weight: 500;
+          border-radius: 3px;
         }
-      }
-      figcaption {
-        height: 60px;
-        margin-top: 20px;
-        margin-left: 15px;
-        p {
-          font-weight: 300;
-          line-height: 1.5em;
+        img {
+          object-fit: cover;
+          height: 150px;
+          width: 100%;
+          border-radius: 18px 18px 0 0;
+          object-position: 50% 60%;
+          @include media-min($bp-tablet) {
+            height: 200px;
+          }
+        }
+        figcaption {
+          height: 60px;
+          margin-top: 20px;
+          margin-left: 15px;
+          p {
+            font-weight: 300;
+            line-height: 1.5em;
+          }
         }
       }
     }

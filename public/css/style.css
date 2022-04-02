@@ -424,16 +424,16 @@ a {
 }
 
 h3 {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .btn {
   margin-top: 30px;
   margin-bottom: 50px;
   height: 50px;
-  width: 210px;
+  min-width: 210px;
   border-radius: 35px;
-  box-shadow: 0px 5px 7px #dddddd;
+  box-shadow: 0px 5px 7px #d0d0d0;
   color: #fff;
   font-weight: 500;
   display: flex;
@@ -443,8 +443,8 @@ h3 {
   background: linear-gradient(170deg, #FF79DA 10%, #9356DC);
 }
 .btn:hover {
-  box-shadow: 0px 5px 7px #d0d0d0;
-  opacity: 85%;
+  box-shadow: 0px 5px 7px #a2a2a2;
+  opacity: 87%;
 }
 
 .hearts {
@@ -470,15 +470,23 @@ header img {
 footer {
   background-color: #353535;
   color: #fff;
-  padding: 30px;
 }
-@media screen and (min-width: 1200px) {
+footer nav {
+  padding: 20px;
+}
+@media screen and (min-width: 992px) {
   footer nav {
     max-width: 1180px;
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  footer nav {
+    padding-left: 20px;
+  }
+}
 footer nav h3 {
+  margin-top: 20px;
   font-family: "Shrikhand", cursive;
 }
 footer nav ul {
@@ -486,15 +494,16 @@ footer nav ul {
   margin: 20px 0;
   line-height: 1.6em;
 }
-footer nav ul li {
-  font-size: 1.1em;
+footer nav ul li:nth-child(3), footer nav ul li:last-child {
+  font-weight: 300;
 }
 footer nav ul a {
   color: #fff;
 }
 footer nav ul a i {
-  margin-right: 10px;
-  width: 18px;
+  margin-right: 15px;
+  width: 7px;
+  font-size: 0.9em;
 }
 
 #location {
@@ -533,7 +542,7 @@ footer nav ul a i {
   padding: 40px 20px;
   width: 100%;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   #functionning {
     max-width: 1180px;
     margin: 0 auto;
@@ -602,34 +611,32 @@ footer nav ul a i {
 
 #restaurants {
   background-color: #F6F6F6;
+}
+#restaurants div {
   padding: 50px 20px;
 }
 @media screen and (min-width: 992px) {
-  #restaurants {
+  #restaurants div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #restaurants {
     max-width: 1180px;
     margin: 0 auto;
   }
 }
-#restaurants h2 {
+#restaurants div h2 {
   flex-basis: 100%;
 }
-#restaurants article {
+#restaurants div article {
   margin-bottom: 25px;
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  #restaurants article {
+  #restaurants div article {
     flex-basis: 49%;
   }
 }
-#restaurants article figure {
+#restaurants div article figure {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -637,7 +644,7 @@ footer nav ul a i {
   border-radius: 15px;
   background-color: #fff;
 }
-#restaurants article figure span:first-child {
+#restaurants div article figure span:first-child {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -648,7 +655,7 @@ footer nav ul a i {
   font-weight: 500;
   border-radius: 3px;
 }
-#restaurants article figure img {
+#restaurants div article figure img {
   object-fit: cover;
   height: 150px;
   width: 100%;
@@ -656,16 +663,16 @@ footer nav ul a i {
   object-position: 50% 60%;
 }
 @media screen and (min-width: 768px) {
-  #restaurants article figure img {
+  #restaurants div article figure img {
     height: 200px;
   }
 }
-#restaurants article figure figcaption {
+#restaurants div article figure figcaption {
   height: 60px;
   margin-top: 20px;
   margin-left: 15px;
 }
-#restaurants article figure figcaption p {
+#restaurants div article figure figcaption p {
   font-weight: 300;
   line-height: 1.5em;
 }

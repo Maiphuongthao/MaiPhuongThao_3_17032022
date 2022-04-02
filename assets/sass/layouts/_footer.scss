@@ -1,26 +1,36 @@
 footer {
   background-color: $light-black;
   color: $white;
-  padding: 30px;
+
   nav {
-    @include media-min($bp-desktop-max) {
+    padding: 20px;
+    @include media-min($bp-desktop) {
       @include margin-destop-max;
     }
+    @include media-min($bp-desktop-max) {
+      padding-left: 20px;
+    }
     h3 {
+      margin-top: 20px;
       font-family: "Shrikhand", cursive;
     }
     ul {
       list-style: none;
       margin: 20px 0;
       line-height: 1.6em;
+
       li {
-        font-size: $tel-text-size;
+        &:nth-child(3),
+        &:last-child {
+          font-weight: 300;
+        }
       }
       a {
         color: $white;
         i {
-          margin-right: 10px;
-          width: 18px;
+          margin-right: 15px;
+          width: 7px;
+          font-size: 0.9em;
         }
       }
     }

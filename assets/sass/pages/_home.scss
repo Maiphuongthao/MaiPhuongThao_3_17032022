@@ -62,7 +62,7 @@
       align-items: center;
       counter-increment: my-counter;
       font-weight: 500;
-      @include shadow($light-grey, 2%);
+      @include shadow($light-grey, 3%);
       &::before {
         content: counter(my-counter);
         @include display-center;
@@ -77,7 +77,7 @@
       }
       &:hover {
         background-color: $lilas;
-        @include shadow($light-grey, 4%);
+        @include shadow($light-grey, 8%);
         & > i {
           color: $primary-color;
         }

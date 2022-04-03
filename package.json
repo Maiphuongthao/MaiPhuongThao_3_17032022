@@ -1,0 +1,20 @@
+{
+  "name": "maiphuongthao_3_17032022",
+  "version": "1.0.0",
+  "description": "Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/main.scss public/css/style.css",
+    "start": "sass ./assets/sass/main.scss public/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maiphuongthao/MaiPhuongThao_3_17032022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maiphuongthao/MaiPhuongThao_3_17032022/issues"
+  },
+  "homepage": "https://github.com/Maiphuongthao/MaiPhuongThao_3_17032022#readme"
+}

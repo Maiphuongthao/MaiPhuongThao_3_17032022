@@ -1,0 +1,25 @@
+@mixin display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin margin-destop-max {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin shadow($color, $percent) {
+  box-shadow: 0 5px 8px darken($color, $percent);
+}
+
+@mixin media($breakpoint, $breakpoints) {
+  @media screen and (min-width: $breakpoint) and (max-width: $breakpoints) {
+    @content;
+  }
+}
+@mixin media-min($breakpoints) {
+  @media screen and (min-width: $breakpoints) {
+    @content;
+  }
+}

@@ -2,6 +2,15 @@ header {
   display: flex;
   @include display-center;
   height: 75px;
+  position: relative;
+  a{
+    i{
+position: absolute;
+left:20px;
+font-size:1.3em;
+top: 25px;
+    }
+  }
   img {
     height: 30px;
   }

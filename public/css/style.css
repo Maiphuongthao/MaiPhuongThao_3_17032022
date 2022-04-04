@@ -448,7 +448,6 @@ h3 {
 }
 
 .hearts {
-  background-color: #fff;
   position: absolute;
   right: 25px;
   bottom: 26px;
@@ -462,6 +461,13 @@ header {
   justify-content: center;
   align-items: center;
   height: 75px;
+  position: relative;
+}
+header a i {
+  position: absolute;
+  left: 20px;
+  font-size: 1.3em;
+  top: 25px;
 }
 header img {
   height: 30px;
@@ -675,6 +681,86 @@ footer nav ul a i {
 #restaurants div article figure figcaption p {
   font-weight: 300;
   line-height: 1.5em;
+}
+
+main figure {
+  width: 100%;
+}
+main figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+main #menu {
+  position: relative;
+  z-index: 1;
+  background-color: #F6F6F6;
+  border-radius: 35px 35px 0 0;
+  padding: 20px;
+  margin-top: -50px;
+}
+main #menu section:first-child {
+  position: relative;
+}
+main #menu section:first-child h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+}
+main #menu section:first-child span {
+  bottom: 4px;
+  right: 10px;
+}
+main #menu section h2 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+main #menu section h2::after {
+  content: "";
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+  display: flex;
+  margin-top: 5px;
+}
+main #menu section article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  min-height: 70px;
+  box-shadow: 0 5px 8px #dddddd;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+main #menu section article h3 {
+  font-size: 1.1em;
+}
+main #menu section article div {
+  height: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.5em;
+}
+main #menu section article div p {
+  font-weight: 300;
+}
+main #menu section article span:first-child {
+  display: flex;
+  align-items: flex-end;
+  width: 50px;
+  height: 100%;
+  margin: 0;
+  font-weight: bold;
+}
+main #menu section article span:last-child {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

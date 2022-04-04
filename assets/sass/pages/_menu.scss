@@ -17,6 +17,7 @@ main {
     section {
       &:first-child {
         position: relative;
+        margin-bottom: 30px;
         h1 {
           font-family: $font;
           font-size: 1.5em;
@@ -26,60 +27,66 @@ main {
           right: 10px;
         }
       }
-      h2 {
-        text-transform: uppercase;
-        font-size: 1em;
-        font-weight: 300;
-        margin-bottom: 15px;
-        margin-top: 40px;
-        &::after {
-          content: "";
-          background-color: $tertiary-color;
-          width: 40px;
-          height: 3px;
-          display: flex;
-          margin-top: 5px;
+      &:nth-child(n + 2) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        justify-content: center;
+        h2 {
+          text-transform: uppercase;
+          font-size: 1em;
+          font-weight: 300;
+          margin-bottom: 15px;
+          &::after {
+            content: "";
+            background-color: $tertiary-color;
+            width: 40px;
+            height: 3px;
+            display: flex;
+            margin-top: 5px;
+          }
         }
       }
 
       article {
         width: 100%;
         display: flex;
-        align-items: center;
         justify-content: space-between;
         background-color: $white;
-        min-height: 70px;
+        height: 70px;
         @include shadow($light-grey, 10%);
         border-radius: 15px;
-        overflow: hidden;
         margin-bottom: 15px;
-        padding: 10px;
-        
+        padding-left: 10px;
         h3 {
           font-size: $tel-text-size;
         }
         div {
-
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           height: 100%;
-          text-overflow: ellipsis;
+margin: 0;
           white-space: nowrap;
-          overflow: hidden;
+          overflow:hidden;
+          text-overflow: ellipsis;
           line-height: 1.5em;
           p {
             font-weight: 300;
           }
         }
         span {
-          &:first-child {
+          &:nth-child(2) {
             display: flex;
             align-items: flex-end;
-            width: 50px;
+            justify-content: center;
+            width: 60px;
             height: 100%;
-            margin: 0;
-          font-weight: bold;
+            padding-bottom: 13px;
+            font-weight: 700;
           }
-          &:last-child{
-              display: none;
+          &:last-child {
+            display: none;
           }
         }
       }

@@ -4,9 +4,9 @@ main {
       object-fit: cover;
       width: 100%;
       height: 250px;
-      @include media-min($bp-tablet){
-       height: 350px;
-    }
+      @include media-min($bp-tablet) {
+        height: 350px;
+      }
     }
   }
   #menu {
@@ -19,10 +19,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include media-min($bp-desktop){
-        @include margin-destop-max;
-        margin-top: -70px;
-     }
+    @include media-min($bp-desktop) {
+      @include margin-destop-max;
+      margin-top: -70px;
+    }
     section {
       &:first-child {
         position: relative;
@@ -43,7 +43,7 @@ main {
         margin-bottom: 30px;
         justify-content: center;
         width: 100%;
-        
+
         h2 {
           text-transform: uppercase;
           font-size: 1em;
@@ -105,9 +105,9 @@ main {
         }
       }
     }
-    .btn{
-       align-self: center;
-       margin-top: 20px;
+    .btn {
+      align-self: center;
+      margin-top: 20px;
     }
   }
 }

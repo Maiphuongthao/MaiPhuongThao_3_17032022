@@ -683,9 +683,6 @@ footer nav ul a i {
   line-height: 1.5em;
 }
 
-main figure {
-  width: 100%;
-}
 main figure img {
   object-fit: cover;
   width: 100%;
@@ -696,7 +693,7 @@ main #menu {
   z-index: 1;
   background-color: #F6F6F6;
   border-radius: 35px 35px 0 0;
-  padding: 20px;
+  padding: 20px 20px 10px;
   margin-top: -50px;
 }
 main #menu section:first-child {
@@ -739,7 +736,7 @@ main #menu section article {
   height: 70px;
   box-shadow: 0 5px 8px #dddddd;
   border-radius: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding-left: 10px;
 }
 main #menu section article div {

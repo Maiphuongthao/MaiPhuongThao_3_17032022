@@ -742,19 +742,21 @@ main #menu section article {
   margin-bottom: 15px;
   padding-left: 10px;
 }
-main #menu section article h3 {
-  font-size: 1.1em;
-}
 main #menu section article div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   line-height: 1.5em;
+  min-width: 0;
+}
+main #menu section article div * {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+main #menu section article div h3 {
+  font-size: 1.1em;
 }
 main #menu section article div p {
   font-weight: 300;

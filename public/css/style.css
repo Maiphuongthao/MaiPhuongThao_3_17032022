@@ -431,12 +431,11 @@ h3 {
   margin-top: 30px;
   margin-bottom: 50px;
   height: 50px;
-  min-width: 210px;
+  width: 210px;
   border-radius: 35px;
   box-shadow: 0 5px 8px #d0d0d0;
   color: #fff;
   font-weight: 500;
-  display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,6 +470,12 @@ header a i {
 }
 header img {
   height: 30px;
+}
+@media screen and (min-width: 992px) {
+  header {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 }
 
 footer {
@@ -688,6 +693,11 @@ main figure img {
   width: 100%;
   height: 250px;
 }
+@media screen and (min-width: 768px) {
+  main figure img {
+    height: 400px;
+  }
+}
 main #menu {
   position: relative;
   z-index: 1;
@@ -695,10 +705,21 @@ main #menu {
   border-radius: 35px 35px 0 0;
   padding: 20px 20px 10px;
   margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  main #menu {
+    max-width: 1180px;
+    margin: 0 auto;
+    margin-top: -70px;
+  }
 }
 main #menu section:first-child {
   position: relative;
   margin-bottom: 30px;
+  width: 100%;
 }
 main #menu section:first-child h1 {
   font-family: "Shrikhand", cursive;
@@ -713,6 +734,7 @@ main #menu section:nth-child(n+2) {
   flex-direction: column;
   margin-bottom: 30px;
   justify-content: center;
+  width: 100%;
 }
 main #menu section:nth-child(n+2) h2 {
   text-transform: uppercase;
@@ -769,6 +791,10 @@ main #menu section article span:nth-child(2) {
 }
 main #menu section article span:last-child {
   display: none;
+}
+main #menu .btn {
+  align-self: center;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

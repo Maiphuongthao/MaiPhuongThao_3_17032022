@@ -431,12 +431,11 @@ h3 {
   margin-top: 30px;
   margin-bottom: 50px;
   height: 50px;
-  min-width: 210px;
+  width: 210px;
   border-radius: 35px;
   box-shadow: 0 5px 8px #d0d0d0;
   color: #fff;
   font-weight: 500;
-  display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,12 +447,12 @@ h3 {
 }
 
 .hearts {
-  background-color: #fff;
-  position: absolute;
-  right: 25px;
-  bottom: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.6em;
   color: #000;
+  margin-right: 10px;
 }
 
 header {
@@ -462,9 +461,22 @@ header {
   justify-content: center;
   align-items: center;
   height: 75px;
+  position: relative;
+}
+header a i {
+  position: absolute;
+  left: 20px;
+  font-size: 1.3em;
+  top: 25px;
 }
 header img {
   height: 30px;
+}
+@media screen and (min-width: 992px) {
+  header {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 }
 
 footer {
@@ -612,11 +624,11 @@ footer nav ul a i {
 #restaurants {
   background-color: #F6F6F6;
 }
-#restaurants div {
+#restaurants > div {
   padding: 50px 20px;
 }
 @media screen and (min-width: 992px) {
-  #restaurants div {
+  #restaurants > div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -624,19 +636,19 @@ footer nav ul a i {
     margin: 0 auto;
   }
 }
-#restaurants div h2 {
+#restaurants > div h2 {
   flex-basis: 100%;
 }
-#restaurants div article {
+#restaurants > div article {
   margin-bottom: 25px;
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  #restaurants div article {
+  #restaurants > div article {
     flex-basis: 49%;
   }
 }
-#restaurants div article figure {
+#restaurants > div article figure {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -644,7 +656,7 @@ footer nav ul a i {
   border-radius: 15px;
   background-color: #fff;
 }
-#restaurants div article figure span:first-child {
+#restaurants > div article figure span:first-child {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -655,7 +667,7 @@ footer nav ul a i {
   font-weight: 500;
   border-radius: 3px;
 }
-#restaurants div article figure img {
+#restaurants > div article figure img {
   object-fit: cover;
   height: 150px;
   width: 100%;
@@ -663,18 +675,128 @@ footer nav ul a i {
   object-position: 50% 60%;
 }
 @media screen and (min-width: 768px) {
-  #restaurants div article figure img {
+  #restaurants > div article figure img {
     height: 200px;
   }
 }
-#restaurants div article figure figcaption {
+#restaurants > div article figure figcaption {
   height: 60px;
-  margin-top: 20px;
-  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 15px;
 }
-#restaurants div article figure figcaption p {
+#restaurants > div article figure figcaption p {
   font-weight: 300;
   line-height: 1.5em;
+}
+
+main figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  main figure img {
+    height: 350px;
+  }
+}
+main #menu {
+  position: relative;
+  z-index: 1;
+  background-color: #F6F6F6;
+  border-radius: 35px 35px 0 0;
+  padding: 20px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  main #menu {
+    max-width: 1180px;
+    margin: 0 auto;
+    margin-top: -70px;
+  }
+}
+main #menu section:first-child {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #menu section:first-child h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+}
+main #menu section:nth-child(n+2) {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  justify-content: center;
+  width: 100%;
+}
+main #menu section:nth-child(n+2) h2 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+main #menu section:nth-child(n+2) h2::after {
+  content: "";
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+  display: flex;
+  margin-top: 5px;
+}
+main #menu section article {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 70px;
+  box-shadow: 0 5px 8px #dddddd;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+main #menu section article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  line-height: 1.5em;
+  min-width: 0;
+}
+main #menu section article div * {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+main #menu section article div h3 {
+  font-size: 1.1em;
+}
+main #menu section article div p {
+  font-weight: 300;
+}
+main #menu section article span:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  padding-bottom: 13px;
+  font-weight: 700;
+}
+main #menu section article span:last-child {
+  display: none;
+}
+main #menu .btn {
+  align-self: center;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,6 @@
 .hearts {
-  background-color: $white;
-  position: absolute;
-  right: 25px;
-  bottom: 26px;
+  @include display-center;
   font-size: 1.6em;
   color: $black;
+  margin-right: 10px;
 }

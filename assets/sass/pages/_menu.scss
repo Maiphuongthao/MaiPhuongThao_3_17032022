@@ -1,0 +1,112 @@
+main {
+  figure {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 250px;
+      @include media-min($bp-tablet) {
+        height: 350px;
+      }
+    }
+  }
+  #menu {
+    position: relative;
+    z-index: 1;
+    background-color: $light-grey;
+    border-radius: 35px 35px 0 0;
+    padding: 20px;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include media-min($bp-desktop) {
+      @include margin-destop-max;
+      margin-top: -70px;
+    }
+    section {
+      &:first-child {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+          font-family: $font;
+          font-size: 1.5em;
+        }
+      }
+      &:nth-child(n + 2) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        justify-content: center;
+        width: 100%;
+
+        h2 {
+          text-transform: uppercase;
+          font-size: 1em;
+          font-weight: 300;
+          margin-bottom: 15px;
+          &::after {
+            content: "";
+            background-color: $tertiary-color;
+            width: 40px;
+            height: 3px;
+            display: flex;
+            margin-top: 5px;
+          }
+        }
+      }
+
+      article {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        height: 70px;
+        @include shadow($light-grey, 10%);
+        border-radius: 15px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+          line-height: 1.5em;
+          min-width: 0;
+          * {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          h3 {
+            font-size: $tel-text-size;
+          }
+          p {
+            font-weight: 300;
+          }
+        }
+        span {
+          &:nth-child(2) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 60px;
+            height: 100%;
+            padding-bottom: 13px;
+            font-weight: 700;
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+    .btn {
+      align-self: center;
+      margin-top: 20px;
+    }
+  }
+}

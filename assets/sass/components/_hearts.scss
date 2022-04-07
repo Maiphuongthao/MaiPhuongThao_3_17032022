@@ -1,6 +1,5 @@
 .hearts {
-  display: flex;
-  justify-content: center;
+  @include display-center;
   font-size: 1.6em;
   color: $black;
   margin-right: 10px;

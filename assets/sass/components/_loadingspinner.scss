@@ -1,0 +1,57 @@
+
+    .loader{
+        @include display-center;
+        background-color:$white;
+        width:100%;
+        height:100%;
+        position: fixed;
+        z-index:1000;
+        animation: loading 4s ease-in-out 1s forwards;
+    
+        .loader-bar{
+        position:relative;
+        height:100px;
+        width:100px;
+        border-radius:50%;
+        box-shadow: 0 0 2px 4px lighten($primary-color, 20%),
+        0 0 4px 8px lighten($secondary-color, 20%),
+        0 0 5px 10px lighten($tertiary-color, 20%);
+        animation: loader-bar 4s linear infinite;
+        &:nth-child(1){
+            border:10px solid $tertiary-color;
+            &::before{
+                @include before-bar($primary-color);
+                animation: loader-bar-rotate 2s linear infinite;
+                
+             }
+        }
+        &:nth-child(2){
+            margin-left:-35px;
+            border:10px solid $primary-color;
+            &::before{
+                @include before-bar($secondary-color);
+                animation: loader-bar-rotate 2s linear infinite;
+             }
+        }
+        &:nth-child(3){
+            border:10px solid $secondary-color;
+            margin-left:-35px;
+            &::before{
+                @include before-bar($tertiary-color);
+                animation: loader-bar-rotate 2s linear infinite;
+             }
+        }
+
+    }
+p{
+    position:absolute;
+    bottom:345px;
+    font-size:1.5em;
+    font-weight:700;
+    letter-spacing:0.5em;
+    background: linear-gradient($secondary-color, $primary-color, $tertiary-color);
+    -webkit-background-clip: text;
+    background-clip:text;
+    color: transparent;
+}}
+    

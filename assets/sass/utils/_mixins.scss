@@ -23,3 +23,17 @@
     @content;
   }
 }
+
+@mixin before-bar($color){
+  content:"";
+            position:absolute;
+            bottom:5px;
+            background-color:$color;
+            width:10px;
+            height:10px;
+        box-shadow: 0 0 0 2px lighten($color, 5%),
+    0 0 0 4px lighten($color,15%),
+    0 0 0 5px lighten($color, 25%),
+    0 0 0 8px lighten($color,30%);
+        
+}

@@ -48,6 +48,8 @@ main {
           font-size: 1em;
           font-weight: 300;
           margin-bottom: 15px;
+          animation: loading-time-gap 1s ease-in 100ms;
+        @include loading-menu-mode(20%);
           &::after {
             content: "";
             background-color: $tertiary-color;
@@ -69,7 +71,7 @@ main {
         border-radius: 15px;
         margin-bottom: 20px;
         padding-left: 10px;
-        animation: loading-time-gap 1s ease-in;
+        animation: loading-time-gap 1.2s ease-in 200ms;
         @include loading-menu-mode(20%);
         div {
           display: flex;
@@ -78,7 +80,7 @@ main {
           height: 100%;
           line-height: 1.5em;
           min-width: 0;
-          animation: loading-menu-gap 1.4s ease-in 125ms;
+          animation: loading-menu-gap 1.4s ease-in 325ms;
         @include loading-menu-mode(20px);
           * {
             overflow: hidden;

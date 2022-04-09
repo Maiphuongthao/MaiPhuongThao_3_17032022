@@ -891,6 +891,10 @@ main #menu section:nth-child(n+2) h2 {
   font-size: 1em;
   font-weight: 300;
   margin-bottom: 15px;
+  animation: loading-time-gap 1s ease-in 100ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
 }
 main #menu section:nth-child(n+2) h2::after {
   content: "";
@@ -910,7 +914,7 @@ main #menu section article {
   border-radius: 15px;
   margin-bottom: 20px;
   padding-left: 10px;
-  animation: loading-time-gap 1s ease-in;
+  animation: loading-time-gap 1.2s ease-in 200ms;
   animation-fill-mode: forwards;
   transform: translateY(20%);
   opacity: 0;
@@ -922,7 +926,7 @@ main #menu section article div {
   height: 100%;
   line-height: 1.5em;
   min-width: 0;
-  animation: loading-menu-gap 1.4s ease-in 125ms;
+  animation: loading-menu-gap 1.4s ease-in 325ms;
   animation-fill-mode: forwards;
   transform: translateY(20px);
   opacity: 0;

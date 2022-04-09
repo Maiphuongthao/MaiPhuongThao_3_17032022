@@ -474,11 +474,31 @@ h3 {
   }
   76% {
     opacity: 0.4;
-    transform: scale(1.25);
+    transform: scale(1.2);
   }
   100% {
     opacity: 0;
     transform: scale(0);
+  }
+}
+@keyframes loading-time-gap {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loading-menu-gap {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .hearts {
@@ -520,7 +540,7 @@ h3 {
   height: 100%;
   position: fixed;
   z-index: 1000;
-  animation: loading 4s ease-in-out 1s forwards;
+  animation: loading 3s ease-in-out 1.5s forwards;
 }
 .loader .loader-bar {
   position: relative;
@@ -890,6 +910,10 @@ main #menu section article {
   border-radius: 15px;
   margin-bottom: 20px;
   padding-left: 10px;
+  animation: loading-time-gap 1s ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
 }
 main #menu section article div {
   display: flex;
@@ -898,6 +922,10 @@ main #menu section article div {
   height: 100%;
   line-height: 1.5em;
   min-width: 0;
+  animation: loading-menu-gap 1.4s ease-in 125ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
 }
 main #menu section article div * {
   overflow: hidden;
@@ -909,6 +937,12 @@ main #menu section article div h3 {
 }
 main #menu section article div p {
   font-weight: 300;
+}
+main #menu section article span {
+  animation: loading-menu-gap 1.4s ease-in 125ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
 }
 main #menu section article span:nth-child(2) {
   display: flex;

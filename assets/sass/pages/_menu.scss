@@ -69,6 +69,8 @@ main {
         border-radius: 15px;
         margin-bottom: 20px;
         padding-left: 10px;
+        animation: loading-time-gap 1s ease-in;
+        @include loading-menu-mode(20%);
         div {
           display: flex;
           flex-direction: column;
@@ -76,6 +78,8 @@ main {
           height: 100%;
           line-height: 1.5em;
           min-width: 0;
+          animation: loading-menu-gap 1.4s ease-in 125ms;
+        @include loading-menu-mode(20px);
           * {
             overflow: hidden;
             white-space: nowrap;
@@ -89,6 +93,8 @@ main {
           }
         }
         span {
+          animation: loading-menu-gap 1.4s ease-in 125ms;
+          @include loading-menu-mode(20px);
           &:nth-child(2) {
             display: flex;
             align-items: flex-end;

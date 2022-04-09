@@ -37,3 +37,9 @@
     0 0 0 8px lighten($color,30%);
         
 }
+
+@mixin loading-menu-mode($size){
+  animation-fill-mode: forwards;
+        transform: translateY($size);
+        opacity:0;
+}

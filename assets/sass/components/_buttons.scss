@@ -10,7 +10,9 @@
   @include display-center;
   background:linear-gradient(170deg, $secondary-color 10%, $primary-color);
   &:hover{
-    
-    animation: shadow-btn 1s ease-in-out forwards;
+    transition:.4s;
+    opacity:0.8;
+    box-shadow: 0.25rem 0.25rem 10px darken($light-grey, 25%);
+
   }
 }

@@ -443,8 +443,8 @@ h3 {
   transition: all 550ms ease-in-out;
 }
 .btn:hover {
-  box-shadow: 0 5px 8px #656565;
-  opacity: 80%;
+  box-shadow: 0 5px 8px #9d9d9d;
+  opacity: 0.85;
 }
 
 .hearts {
@@ -452,8 +452,30 @@ h3 {
   justify-content: center;
   align-items: center;
   font-size: 1.6em;
-  color: #000;
   margin-right: 10px;
+  position: relative;
+  background-color: #fff;
+}
+.hearts::before {
+  background: linear-gradient(170deg, #FF79DA 20%, #9356DC);
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 100%;
+  overflow: hidden;
+  width: 0;
+  transition: all 1s ease-in-out;
+}
+.hearts:hover::before {
+  width: 100%;
 }
 
 header {

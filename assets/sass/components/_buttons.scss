@@ -8,10 +8,10 @@
   color: $white;
   font-weight: 500;
   @include display-center;
-  background:$btn-color;
+  background:linear-gradient(170deg, $secondary-color 10%, $primary-color);
   transition:all 550ms ease-in-out;
   &:hover {
-    @include shadow($mid-grey, 10%);
-    opacity: 80%;
+    @include shadow($light-grey, 35%);
+    opacity: 0.85;
   }
 }

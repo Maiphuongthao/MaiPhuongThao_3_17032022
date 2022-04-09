@@ -1,6 +1,31 @@
 .hearts {
   @include display-center;
   font-size: 1.6em;
-  color: $black;
   margin-right: 10px;
+  position:relative;
+  background-color:$white;
+    &::before{
+      background:linear-gradient(170deg, $secondary-color 20%, $primary-color);
+    font-family:"Font Awesome 5 Free";
+    content:"\f004";
+    font-weight:900;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+ background-size:100%;
+ overflow:hidden;
+width:0;
+ transition:all 1s ease-in-out;
+  }
+  &:hover{
+    &::before{
+      width:100%;
 }
+}}
+
+

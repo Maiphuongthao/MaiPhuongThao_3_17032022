@@ -494,7 +494,7 @@ h3 {
 @keyframes loading-menu-gap {
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
   100% {
     transform: translateY(0);
@@ -891,10 +891,6 @@ main #menu section:nth-child(n+2) h2 {
   font-size: 1em;
   font-weight: 300;
   margin-bottom: 15px;
-  animation: loading-time-gap 1s ease-in 100ms;
-  animation-fill-mode: forwards;
-  transform: translateY(20%);
-  opacity: 0;
 }
 main #menu section:nth-child(n+2) h2::after {
   content: "";
@@ -914,10 +910,6 @@ main #menu section article {
   border-radius: 15px;
   margin-bottom: 20px;
   padding-left: 10px;
-  animation: loading-time-gap 1.2s ease-in 200ms;
-  animation-fill-mode: forwards;
-  transform: translateY(20%);
-  opacity: 0;
 }
 main #menu section article div {
   display: flex;
@@ -926,10 +918,6 @@ main #menu section article div {
   height: 100%;
   line-height: 1.5em;
   min-width: 0;
-  animation: loading-menu-gap 1.4s ease-in 325ms;
-  animation-fill-mode: forwards;
-  transform: translateY(20px);
-  opacity: 0;
 }
 main #menu section article div * {
   overflow: hidden;
@@ -942,12 +930,6 @@ main #menu section article div h3 {
 main #menu section article div p {
   font-weight: 300;
 }
-main #menu section article span {
-  animation: loading-menu-gap 1.4s ease-in 125ms;
-  animation-fill-mode: forwards;
-  transform: translateY(20px);
-  opacity: 0;
-}
 main #menu section article span:nth-child(2) {
   display: flex;
   align-items: flex-end;
@@ -959,6 +941,78 @@ main #menu section article span:nth-child(2) {
 }
 main #menu section article span:last-child {
   display: none;
+}
+main #menu section:nth-child(2) {
+  animation: loading-time-gap 1s ease-in;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
+}
+main #menu section:nth-child(2) h2 {
+  animation: loading-time-gap 1.2s ease-in 150ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
+}
+main #menu section:nth-child(2) article {
+  animation: loading-time-gap 1.4s ease-in 300ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+main #menu section:nth-child(2) div, main #menu section:nth-child(2) span {
+  animation: loading-menu-gap 1.6s ease-in 450ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+main #menu section:nth-child(3) {
+  animation: loading-time-gap 1s ease-in 600ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
+}
+main #menu section:nth-child(3) h2 {
+  animation: loading-time-gap 1.2s ease-in 300ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
+}
+main #menu section:nth-child(3) article {
+  animation: loading-time-gap 1.4s ease-in 450ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+main #menu section:nth-child(3) div, main #menu section:nth-child(3) span {
+  animation: loading-menu-gap 1.6s ease-in 600ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+main #menu section:nth-child(4) {
+  animation: loading-time-gap 1s ease-in 1.65s;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
+}
+main #menu section:nth-child(4) h2 {
+  animation: loading-time-gap 1.2s ease-in 300ms;
+  animation-fill-mode: forwards;
+  transform: translateY(20%);
+  opacity: 0;
+}
+main #menu section:nth-child(4) article {
+  animation: loading-time-gap 1.4s ease-in 600ms;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
+}
+main #menu section:nth-child(4) div, main #menu section:nth-child(4) span {
+  animation: loading-menu-gap 1.6s ease-in 750ms;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
 }
 main #menu .btn {
   align-self: center;

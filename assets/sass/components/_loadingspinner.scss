@@ -6,8 +6,7 @@
         height:100%;
         position: fixed;
         z-index:1000;
-        animation: loading 3s ease-in-out 1.5s forwards;
-    
+        animation: loading 2s linear 1.2s forwards;
         .loader-bar{
         position:relative;
         height:100px;
@@ -18,7 +17,7 @@
         0 0 5px 10px lighten($tertiary-color, 20%);
         animation: loader-bar 4s linear infinite;
         &:nth-child(1){
-            border:10px solid $tertiary-color;
+            border:5px solid $tertiary-color;
             &::before{
                 @include before-bar($primary-color);
                 animation: loader-bar-rotate 2s linear infinite;
@@ -27,14 +26,14 @@
         }
         &:nth-child(2){
             margin-left:-35px;
-            border:10px solid $primary-color;
+            border:5px solid $primary-color;
             &::before{
                 @include before-bar($secondary-color);
                 animation: loader-bar-rotate 2s linear infinite;
              }
         }
         &:nth-child(3){
-            border:10px solid $secondary-color;
+            border:5px solid $secondary-color;
             margin-left:-35px;
             &::before{
                 @include before-bar($tertiary-color);

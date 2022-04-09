@@ -9,9 +9,8 @@
   font-weight: 500;
   @include display-center;
   background:linear-gradient(170deg, $secondary-color 10%, $primary-color);
-  transition:all 550ms ease-in-out;
-  &:hover {
-    @include shadow($light-grey, 35%);
-    opacity: 0.85;
+  &:hover{
+    
+    animation: shadow-btn 1s ease-in-out forwards;
   }
 }

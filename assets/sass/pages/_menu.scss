@@ -42,6 +42,7 @@ main {
         margin-bottom: 30px;
         justify-content: center;
         width: 100%;
+        
 
         h2 {
           text-transform: uppercase;
@@ -60,9 +61,12 @@ main {
       }
 
       article {
+        position:relative;
+        animation: loading-time-gap .8s ease-in
+          0.2s;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         background-color: $white;
         height: 70px;
         @include shadow($light-grey, 10%);
@@ -70,6 +74,20 @@ main {
         margin-bottom: 20px;
         padding-left: 10px;
         cursor:pointer;
+        &:hover{
+      span{
+        &:nth-child(2){
+      transform: translateX(-60px);}
+      &:last-child{
+        transform: translateX(1);
+        opacity:1;
+        i{
+          animation: loader-bar-rotate 1s reverse ease-in;
+        }
+      }
+
+          }
+          }
 
         div {
           display: flex;
@@ -90,115 +108,48 @@ main {
             font-weight: 300;
           }
         }
+          
         span {
-          display: flex;
+          &:nth-child(2){
+            display:flex;
           align-items: flex-end;
-          justify-content: center;
+          justify-content:center;
           width: 60px;
           height: 100%;
           padding-bottom: 13px;
           font-weight: 700;
           overflow: hidden;
-          position: relative;
-          
-          &:hover {
-            &::after {
-              animation: heart-fill 1s ease-in 2s;
-            }
+          transform:translateX(0);
+          transition: transform 300ms linear;
+        }
+        &:last-child{
+          position:absolute;
+          right:0;
+          border-radius: 0 15px 15px 0;
+          font-size:1.5em;
+          @include display-center;
+          height:100%;
+          width:60px;
+          background-color:$tertiary-color;
+          transform: translateX(0);
+          transition: transform 300ms linear;
+          opacity:0;
+          i{
+            color:white;
+            
           }
-          &::before{
-            font-family: "Font Awesome 5 Free";
-            content: "\f058";
-            font-weight: 900;
-            color: $white;
-            @include display-center;
-          }
-          &:after {
-            content:"";
-            background-color: $tertiary-color;
-            @include display-center;
-            font-size: 1.5em;
-            border-radius: 0 15px 15px 0;
-            position: absolute;
-            bottom: 0;
-            overflow: hidden;
-            transition: all 0.3s ease-out forwards;
-          }
-          
         }
       }
 
-      &:nth-child(2) {
-        animation: loading-time-gap nth($animation-time, 1) ease-in;
-        @include loading-menu-mode(20%);
-        h2 {
-          animation: loading-time-gap nth($animation-time, 2) ease-in
-            nth($waiting-time,1);
-          @include loading-menu-mode(20%);
-        }
-        article {
-          animation: loading-time-gap nth($animation-time, 3) ease-in
-            nth($waiting-time, 4);
-          @include loading-menu-mode(20px);
-        }
-
-        div,
-        span {
-          animation: loading-menu-gap nth($animation-time, 4) ease-in
-            nth($waiting-time, 3);
-          @include loading-menu-mode(20px);
-        }
-      }
-
-      &:nth-child(3) {
-        animation: loading-time-gap nth($animation-time, 1) ease-in
-          nth($waiting-time, 4);
-        @include loading-menu-mode(20%);
-        h2 {
-          animation: loading-time-gap nth($animation-time, 2) ease-in
-            nth($waiting-time, 5);
-          @include loading-menu-mode(20%);
-        }
-        article {
-          animation: loading-time-gap nth($animation-time, 3) ease-in
-            nth($waiting-time, 4);
-          @include loading-menu-mode(20px);
-        }
-
-        div,
-        span {
-          animation: loading-menu-gap nth($animation-time, 4) ease-in
-            nth($waiting-time, 4);
-          @include loading-menu-mode(20px);
-        }
-      }
-
-      &:nth-child(4) {
-        animation: loading-time-gap nth($animation-time, 1) ease-in
-          nth($waiting-time, 7);
-        @include loading-menu-mode(20%);
-        h2 {
-          animation: loading-time-gap nth($animation-time, 2) ease-in
-            nth($waiting-time, 5);
-          @include loading-menu-mode(20%);
-        }
-        article {
-          animation: loading-time-gap nth($animation-time, 3) ease-in
-            nth($waiting-time, 4);
-          @include loading-menu-mode(15px);
-        }
-
-        div,
-        span {
-          animation: loading-menu-gap nth($animation-time, 4) ease-in
-            nth($waiting-time, 4);
-          @include loading-menu-mode(15px);
-        }
-      }
+      
     }
-    .btn {
+  
+  }
+  .btn {
       align-self: center;
       margin-top: 20px;
     }
-  }
 }
+}
+  
+

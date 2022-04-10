@@ -439,12 +439,25 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(170deg, #FF79DA 10%, #9356DC);
+  position: relative;
+  background: linear-gradient(170deg, #FF79DA 1%, #9356DC 70%);
 }
 .btn:hover {
-  transition: 0.4s;
-  opacity: 0.8;
-  box-shadow: 0.25rem 0.25rem 10px #b6b6b6;
+  opacity: 0.85;
+  transition: 0.5s;
+}
+.btn:hover::before {
+  opacity: 1;
+}
+.btn::before {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  position: absolute;
+  border-radius: 35px;
+  box-shadow: 5px 8px 8px #d0d0d0;
 }
 
 @keyframes shadow-btn {
@@ -523,6 +536,7 @@ h3 {
   -webkit-background-clip: text;
   background-clip: text;
   overflow: hidden;
+  cursor: pointer;
 }
 .hearts::before {
   display: flex;
@@ -933,6 +947,7 @@ main #menu section article {
   border-radius: 15px;
   margin-bottom: 20px;
   padding-left: 10px;
+  cursor: pointer;
 }
 main #menu section article div {
   display: flex;
@@ -967,8 +982,7 @@ main #menu section article span {
 main #menu section article span:hover::after {
   animation: heart-fill 1s ease-in 2s;
 }
-main #menu section article span:after {
-  background-color: #99E2D0;
+main #menu section article span::before {
   font-family: "Font Awesome 5 Free";
   content: "\f058";
   font-weight: 900;
@@ -976,13 +990,19 @@ main #menu section article span:after {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+}
+main #menu section article span:after {
+  content: "";
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5em;
   border-radius: 0 15px 15px 0;
   position: absolute;
   bottom: 0;
   overflow: hidden;
+  transition: all 0.3s ease-out forwards;
 }
 main #menu section:nth-child(2) {
   animation: loading-time-gap 1s ease-in;
@@ -997,12 +1017,13 @@ main #menu section:nth-child(2) h2 {
   opacity: 0;
 }
 main #menu section:nth-child(2) article {
-  animation: loading-time-gap 1.4s ease-in 300ms;
+  animation: loading-time-gap 1.4s ease-in 600ms;
   animation-fill-mode: forwards;
   transform: translateY(20px);
   opacity: 0;
 }
-main #menu section:nth-child(2) div, main #menu section:nth-child(2) span {
+main #menu section:nth-child(2) div,
+main #menu section:nth-child(2) span {
   animation: loading-menu-gap 1.6s ease-in 450ms;
   animation-fill-mode: forwards;
   transform: translateY(20px);
@@ -1015,31 +1036,32 @@ main #menu section:nth-child(3) {
   opacity: 0;
 }
 main #menu section:nth-child(3) h2 {
-  animation: loading-time-gap 1.2s ease-in 300ms;
+  animation: loading-time-gap 1.2s ease-in 750ms;
   animation-fill-mode: forwards;
   transform: translateY(20%);
   opacity: 0;
 }
 main #menu section:nth-child(3) article {
-  animation: loading-time-gap 1.4s ease-in 450ms;
+  animation: loading-time-gap 1.4s ease-in 600ms;
   animation-fill-mode: forwards;
   transform: translateY(20px);
   opacity: 0;
 }
-main #menu section:nth-child(3) div, main #menu section:nth-child(3) span {
+main #menu section:nth-child(3) div,
+main #menu section:nth-child(3) span {
   animation: loading-menu-gap 1.6s ease-in 600ms;
   animation-fill-mode: forwards;
   transform: translateY(20px);
   opacity: 0;
 }
 main #menu section:nth-child(4) {
-  animation: loading-time-gap 1s ease-in 1.65s;
+  animation: loading-time-gap 1s ease-in 1.5s;
   animation-fill-mode: forwards;
   transform: translateY(20%);
   opacity: 0;
 }
 main #menu section:nth-child(4) h2 {
-  animation: loading-time-gap 1.2s ease-in 300ms;
+  animation: loading-time-gap 1.2s ease-in 750ms;
   animation-fill-mode: forwards;
   transform: translateY(20%);
   opacity: 0;
@@ -1050,8 +1072,9 @@ main #menu section:nth-child(4) article {
   transform: translateY(15px);
   opacity: 0;
 }
-main #menu section:nth-child(4) div, main #menu section:nth-child(4) span {
-  animation: loading-menu-gap 1.6s ease-in 750ms;
+main #menu section:nth-child(4) div,
+main #menu section:nth-child(4) span {
+  animation: loading-menu-gap 1.6s ease-in 600ms;
   animation-fill-mode: forwards;
   transform: translateY(15px);
   opacity: 0;

@@ -5,6 +5,7 @@
   -webkit-background-clip:text;
   background-clip:text;
  overflow:hidden;
+ cursor:pointer;
     &::before{
       @include display-center;
       background:linear-gradient(70deg, $secondary-color 20%, $primary-color);

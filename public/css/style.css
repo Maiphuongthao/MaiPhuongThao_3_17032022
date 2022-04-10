@@ -509,7 +509,7 @@ h3 {
 }
 @keyframes loading-time-gap {
   0% {
-    transform: translateY(-20%) rotateY(30deg);
+    transform: translateY(-20%) rotateY(20deg);
     opacity: 0;
   }
   100% {
@@ -929,7 +929,7 @@ main #menu section:nth-child(n+2) h2::after {
 }
 main #menu section article {
   position: relative;
-  animation: loading-time-gap 0.8s ease-out 0.2s;
+  animation: loading-time-gap 1s ease-out 0.2s;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -980,7 +980,7 @@ main #menu section article span:nth-child(2) {
   font-weight: 700;
   overflow: hidden;
   transform: translateX(0);
-  transition: transform 300ms linear;
+  transition: transform 400ms linear;
 }
 main #menu section article span:last-child {
   position: absolute;
@@ -996,7 +996,7 @@ main #menu section article span:last-child {
   transform: scaleX(0);
   opacity: 0;
   transform-origin: right;
-  transition: transform 300ms linear;
+  transition: transform 400ms ease-in-out;
 }
 main #menu section article span:last-child i {
   color: white;

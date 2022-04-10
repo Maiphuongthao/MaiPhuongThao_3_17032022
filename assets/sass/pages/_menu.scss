@@ -62,7 +62,7 @@ main {
 
       article {
         position:relative;
-        animation: loading-time-gap .8s ease-out
+        animation: loading-time-gap 1s ease-out
           0.2s;
         width: 100%;
         display: flex;
@@ -120,7 +120,7 @@ main {
           font-weight: 700;
           overflow: hidden;
           transform:translateX(0);
-          transition: transform 300ms linear;
+          transition: transform 400ms linear;
         }
         &:last-child{
           position:absolute;
@@ -134,7 +134,7 @@ main {
           transform: scaleX(0);
           opacity:0;
           transform-origin:right;
-          transition: transform 300ms linear;
+          transition: transform 400ms ease-in-out;
           i{
             color:white;
             

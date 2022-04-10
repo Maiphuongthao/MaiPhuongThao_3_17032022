@@ -62,7 +62,7 @@ main {
 
       article {
         position:relative;
-        animation: loading-time-gap .8s ease-in
+        animation: loading-time-gap .8s ease-out
           0.2s;
         width: 100%;
         display: flex;
@@ -77,12 +77,12 @@ main {
         &:hover{
       span{
         &:nth-child(2){
-      transform: translateX(-60px);}
+      transform: translateX(-100%);}
       &:last-child{
-        transform: translateX(1);
+        transform: scaleX(1);
         opacity:1;
         i{
-          animation: loader-bar-rotate 1s reverse ease-in;
+          animation: loader-bar-rotate 300ms reverse linear;
         }
       }
 
@@ -131,9 +131,10 @@ main {
           height:100%;
           width:60px;
           background-color:$tertiary-color;
-          transform: translateX(0);
-          transition: transform 300ms linear;
+          transform: scaleX(0);
           opacity:0;
+          transform-origin:right;
+          transition: transform 300ms linear;
           i{
             color:white;
             

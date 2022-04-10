@@ -509,7 +509,7 @@ h3 {
 }
 @keyframes loading-time-gap {
   0% {
-    transform: translateY(-20%) rotateY(10deg);
+    transform: translateY(-20%) rotateY(30deg);
     opacity: 0;
   }
   100% {
@@ -929,7 +929,7 @@ main #menu section:nth-child(n+2) h2::after {
 }
 main #menu section article {
   position: relative;
-  animation: loading-time-gap 0.8s ease-in 0.2s;
+  animation: loading-time-gap 0.8s ease-out 0.2s;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -942,14 +942,14 @@ main #menu section article {
   cursor: pointer;
 }
 main #menu section article:hover span:nth-child(2) {
-  transform: translateX(-60px);
+  transform: translateX(-100%);
 }
 main #menu section article:hover span:last-child {
-  transform: translateX(1);
+  transform: scaleX(1);
   opacity: 1;
 }
 main #menu section article:hover span:last-child i {
-  animation: loader-bar-rotate 1s reverse ease-in;
+  animation: loader-bar-rotate 300ms reverse linear;
 }
 main #menu section article div {
   display: flex;
@@ -993,9 +993,10 @@ main #menu section article span:last-child {
   height: 100%;
   width: 60px;
   background-color: #99E2D0;
-  transform: translateX(0);
-  transition: transform 300ms linear;
+  transform: scaleX(0);
   opacity: 0;
+  transform-origin: right;
+  transition: transform 300ms linear;
 }
 main #menu section article span:last-child i {
   color: white;

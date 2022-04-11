@@ -439,20 +439,194 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(170deg, #FF79DA 10%, #9356DC);
+  position: relative;
+  transition-duration: 0.2s;
+  background: linear-gradient(170deg, #FF79DA 1%, #9356DC 70%);
 }
 .btn:hover {
-  box-shadow: 0 5px 8px #a2a2a2;
-  opacity: 87%;
+  opacity: 0.85;
+}
+.btn:hover::before {
+  opacity: 1;
+}
+.btn::before {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.3s;
+  position: absolute;
+  border-radius: 35px;
+  box-shadow: 5px 8px 8px #d0d0d0;
 }
 
+@keyframes shadow-btn {
+  0% {
+    transform: translateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(360deg);
+    opacity: 0.8;
+    box-shadow: 0 5px 8px #b6b6b6;
+  }
+}
+@keyframes heart-fill {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-bar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-bar-rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    z-index: -100;
+  }
+}
+@keyframes loading-time-gap {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .hearts {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.6em;
-  color: #000;
-  margin-right: 10px;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  overflow: hidden;
+  cursor: pointer;
+}
+.hearts::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(70deg, #FF79DA 20%, #9356DC);
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-weight: 900;
+  position: absolute;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  overflow: hidden;
+}
+.hearts:hover {
+  color: #fff;
+  transition: 1s;
+}
+.hearts:hover::before {
+  width: 100%;
+  height: 100%;
+  animation: heart-fill 1s ease-in-out;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  animation: loading 2s linear 1.2s forwards;
+}
+.loader .loader-bar {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 4px #c9abee, 0 0 4px 8px #ffdff6, 0 0 5px 10px #e8f9f5;
+  animation: loader-bar 4s linear infinite;
+}
+.loader .loader-bar:nth-child(1) {
+  border: 5px solid #99E2D0;
+}
+.loader .loader-bar:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  background-color: #9356DC;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px #a16be0, 0 0 0 4px #bc95e9, 0 0 0 5px #d7c0f2, 0 0 0 8px #e4d5f6;
+  animation: loader-bar-rotate 2s linear infinite;
+}
+.loader .loader-bar:nth-child(2) {
+  margin-left: -35px;
+  border: 5px solid #9356DC;
+}
+.loader .loader-bar:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  background-color: #FF79DA;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px #ff93e1, 0 0 0 4px #ffc6ef, 0 0 0 5px #fff9fd, 0 0 0 8px white;
+  animation: loader-bar-rotate 2s linear infinite;
+}
+.loader .loader-bar:nth-child(3) {
+  border: 5px solid #FF79DA;
+  margin-left: -35px;
+}
+.loader .loader-bar:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  background-color: #99E2D0;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px #ade8d9, 0 0 0 4px #d5f3eb, 0 0 0 5px #fcfefe, 0 0 0 8px white;
+  animation: loader-bar-rotate 2s linear infinite;
+}
+.loader p {
+  position: absolute;
+  bottom: 345px;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  background: linear-gradient(#FF79DA, #9356DC, #99E2D0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 header {
@@ -752,7 +926,10 @@ main #menu section:nth-child(n+2) h2::after {
   display: flex;
   margin-top: 5px;
 }
-main #menu section article {
+main #menu section:nth-child(n+2) article {
+  position: relative;
+  animation: loading-time-gap 1000ms ease-out 500ms;
+  animation-fill-mode: both;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -762,8 +939,19 @@ main #menu section article {
   border-radius: 15px;
   margin-bottom: 20px;
   padding-left: 10px;
+  cursor: pointer;
 }
-main #menu section article div {
+main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
+  transform: translateX(-100%);
+}
+main #menu section:nth-child(n+2) article:hover span:last-child {
+  transform: scaleX(1);
+  opacity: 1;
+}
+main #menu section:nth-child(n+2) article:hover span:last-child i {
+  animation: loader-bar-rotate 300ms reverse linear;
+}
+main #menu section:nth-child(n+2) article div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -771,18 +959,18 @@ main #menu section article div {
   line-height: 1.5em;
   min-width: 0;
 }
-main #menu section article div * {
+main #menu section:nth-child(n+2) article div * {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-main #menu section article div h3 {
+main #menu section:nth-child(n+2) article div h3 {
   font-size: 1.1em;
 }
-main #menu section article div p {
+main #menu section:nth-child(n+2) article div p {
   font-weight: 300;
 }
-main #menu section article span:nth-child(2) {
+main #menu section:nth-child(n+2) article span:nth-child(2) {
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -790,11 +978,66 @@ main #menu section article span:nth-child(2) {
   height: 100%;
   padding-bottom: 13px;
   font-weight: 700;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 400ms linear;
 }
-main #menu section article span:last-child {
-  display: none;
+main #menu section:nth-child(n+2) article span:last-child {
+  position: absolute;
+  right: 0;
+  border-radius: 0 15px 15px 0;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+  background-color: #99E2D0;
+  transform: scaleX(0);
+  opacity: 0;
+  transform-origin: right;
+  transition: transform 400ms ease-in-out;
 }
-main #menu .btn {
+main #menu section:nth-child(n+2) article span:last-child i {
+  color: white;
+}
+main #menu:nth-child(2) article:nth-of-type(1) {
+  animation-delay: 300ms;
+}
+main #menu:nth-child(2) article:nth-of-type(2) {
+  animation-delay: 600ms;
+}
+main #menu:nth-child(2) article:nth-of-type(3) {
+  animation-delay: 900ms;
+}
+main #menu:nth-child(2) article:nth-of-type(4) {
+  animation-delay: 1200ms;
+}
+main #menu:nth-child(3) article:nth-of-type(1) {
+  animation-delay: 300ms;
+}
+main #menu:nth-child(3) article:nth-of-type(2) {
+  animation-delay: 600ms;
+}
+main #menu:nth-child(3) article:nth-of-type(3) {
+  animation-delay: 900ms;
+}
+main #menu:nth-child(3) article:nth-of-type(4) {
+  animation-delay: 1200ms;
+}
+main #menu:nth-child(4) article:nth-of-type(1) {
+  animation-delay: 300ms;
+}
+main #menu:nth-child(4) article:nth-of-type(2) {
+  animation-delay: 600ms;
+}
+main #menu:nth-child(4) article:nth-of-type(3) {
+  animation-delay: 900ms;
+}
+main #menu:nth-child(4) article:nth-of-type(4) {
+  animation-delay: 1200ms;
+}
+main .btn {
   align-self: center;
   margin-top: 20px;
 }

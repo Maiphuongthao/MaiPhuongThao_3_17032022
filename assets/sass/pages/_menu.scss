@@ -78,10 +78,11 @@ main {
           &:nth-child(2){
         transform: translateX(-100%);}
         &:last-child{
-          transform: scaleX(1);
+          animation:appear 400ms ease-in;
+          animation-fill-mode:both;
           opacity:1;
           i{
-            animation: loader-bar-rotate 300ms reverse linear;
+            animation: loader-bar-rotate 400ms reverse linear;
           }
         }
   
@@ -130,10 +131,8 @@ main {
             height:100%;
             width:60px;
             background-color:$tertiary-color;
-            transform: scaleX(0);
             opacity:0;
             transform-origin:right;
-            transition: transform 400ms ease-in-out;
             i{
               color:white;
               

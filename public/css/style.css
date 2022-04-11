@@ -479,6 +479,14 @@ h3 {
     transform: scale(1);
   }
 }
+@keyframes appear {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 @keyframes loader-bar {
   0% {
     transform: rotate(0deg);
@@ -945,11 +953,12 @@ main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
   transform: translateX(-100%);
 }
 main #menu section:nth-child(n+2) article:hover span:last-child {
-  transform: scaleX(1);
+  animation: appear 400ms ease-in;
+  animation-fill-mode: both;
   opacity: 1;
 }
 main #menu section:nth-child(n+2) article:hover span:last-child i {
-  animation: loader-bar-rotate 300ms reverse linear;
+  animation: loader-bar-rotate 400ms reverse linear;
 }
 main #menu section:nth-child(n+2) article div {
   display: flex;
@@ -993,10 +1002,8 @@ main #menu section:nth-child(n+2) article span:last-child {
   height: 100%;
   width: 60px;
   background-color: #99E2D0;
-  transform: scaleX(0);
   opacity: 0;
   transform-origin: right;
-  transition: transform 400ms ease-in-out;
 }
 main #menu section:nth-child(n+2) article span:last-child i {
   color: white;

@@ -1,31 +1,32 @@
 .hearts {
   @include display-center;
   font-size: 1.6em;
-  position:relative;
-  -webkit-background-clip:text;
-  background-clip:text;
- overflow:hidden;
- cursor:pointer;
- color:$black;
- width:60px;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  overflow: hidden;
+  cursor: pointer;
+  color: $black;
+  width: 60px;
+  &::before {
+    @include display-center;
+    background: linear-gradient(70deg, $secondary-color 20%, $primary-color);
+    font-family: "Font Awesome 5 Free";
+    content: "\f004";
+    width: 0;
+    font-weight: 900;
+    position: absolute;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    overflow: hidden;
+    transition: width 0.9s ease-out;
 
-    &::before{
-      @include display-center;
-      background:linear-gradient(70deg, $secondary-color 20%, $primary-color);
-    font-family:"Font Awesome 5 Free";
-    content:"\f004";
-    width:0;
-    font-weight:900;
-    position:absolute;
-    -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
- overflow:hidden;
- transition: width 0.9s ease-out;
- font-size:1.1em;
+    font-size: 1.1em;
   }
-  &:hover{
-    &::before{
-      width:100%;
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
 }
-}}

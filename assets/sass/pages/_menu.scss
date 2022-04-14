@@ -58,6 +58,10 @@ main {
           }
         }
         article {
+          @for $i from 1 through 4 {
+            &:nth-of-type(#{$i}) {
+              animation-delay: #{$i * 300}ms;
+            }
           position: relative;
           animation: loading-time-gap 1000ms ease-out 500ms;
           animation-fill-mode: both;
@@ -140,16 +144,7 @@ main {
       }
     }
 
-    @for $i from 2 through 4 {
-      &:nth-child(#{$i}) {
-        article {
-          @for $i from 1 through 4 {
-            &:nth-of-type(#{$i}) {
-              animation-delay: #{$i * 300}ms;
-            }
-          }
-        }
-      }
+    
     }
   }
   .btn {

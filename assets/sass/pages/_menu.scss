@@ -42,7 +42,6 @@ main {
         margin-bottom: 30px;
         justify-content: center;
         width: 100%;
-        
 
         h2 {
           text-transform: uppercase;
@@ -59,35 +58,35 @@ main {
           }
         }
         article {
-          position:relative;
-          animation: loading-time-gap 1000ms ease-out
-            500ms;
-            animation-fill-mode:both;
+          position: relative;
+          animation: loading-time-gap 1000ms ease-out 500ms;
+          animation-fill-mode: both;
           width: 100%;
           display: flex;
-          justify-content:space-between;
+          justify-content: space-between;
           background-color: $white;
           height: 70px;
           @include shadow($light-grey, 10%);
           border-radius: 15px;
           margin-bottom: 20px;
           padding-left: 10px;
-          cursor:pointer;
-          &:hover{
-        span{
-          &:nth-child(2){
-        transform: translateX(-100%);}
-        &:last-child{
-          transform: scaleX(1);
-          opacity:1;
-          i{
-            animation: loader-bar-rotate 300ms reverse linear;
+          cursor: pointer;
+          &:hover {
+            span {
+              &:nth-child(2) {
+                transform: translateX(-100%);
+              }
+              &:last-child {
+                animation: appear 400ms ease-in;
+                animation-fill-mode: both;
+                opacity: 1;
+                i {
+                  animation: loader-bar-rotate 400ms reverse linear;
+                }
+              }
+            }
           }
-        }
-  
-            }
-            }
-  
+
           div {
             display: flex;
             flex-direction: column;
@@ -107,60 +106,54 @@ main {
               font-weight: 300;
             }
           }
-            
+
           span {
-            &:nth-child(2){
-              display:flex;
-            align-items: flex-end;
-            justify-content:center;
-            width: 60px;
-            height: 100%;
-            padding-bottom: 13px;
-            font-weight: 700;
-            overflow: hidden;
-            transform:translateX(0);
-            transition: transform 400ms linear;
-          }
-          &:last-child{
-            position:absolute;
-            right:0;
-            border-radius: 0 15px 15px 0;
-            font-size:1.5em;
-            @include display-center;
-            height:100%;
-            width:60px;
-            background-color:$tertiary-color;
-            transform: scaleX(0);
-            opacity:0;
-            transform-origin:right;
-            transition: transform 400ms ease-in-out;
-            i{
-              color:white;
-              
+            &:nth-child(2) {
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              width: 60px;
+              height: 100%;
+              padding-bottom: 13px;
+              font-weight: 700;
+              overflow: hidden;
+              transform: translateX(0);
+              transition: transform 400ms linear;
+            }
+            &:last-child {
+              position: absolute;
+              right: 0;
+              border-radius: 0 15px 15px 0;
+              font-size: 1.5em;
+              @include display-center;
+              height: 100%;
+              width: 60px;
+              background-color: $tertiary-color;
+              opacity: 0;
+              transform-origin: right;
+              i {
+                color: white;
+              }
             }
           }
         }
-        
       }
     }
-      }
 
-      
-  @for $i from 2 through 4 {
-    &:nth-child(#{$i}){
-      article{
-        @for $i from 1 through 4{
-          &:nth-of-type(#{$i}){
-      animation-delay: #{$i * 300}ms}}};
-    }
+    @for $i from 2 through 4 {
+      &:nth-child(#{$i}) {
+        article {
+          @for $i from 1 through 4 {
+            &:nth-of-type(#{$i}) {
+              animation-delay: #{$i * 300}ms;
+            }
+          }
+        }
+      }
     }
   }
   .btn {
-      align-self: center;
-      margin-top: 20px;
-    }
+    align-self: center;
+    margin-top: 20px;
+  }
 }
-
-
-
-

@@ -479,6 +479,14 @@ h3 {
     transform: scale(1);
   }
 }
+@keyframes appear {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 @keyframes loader-bar {
   0% {
     transform: rotate(0deg);
@@ -526,6 +534,8 @@ h3 {
   background-clip: text;
   overflow: hidden;
   cursor: pointer;
+  color: #000;
+  width: 60px;
 }
 .hearts::before {
   display: flex;
@@ -535,26 +545,17 @@ h3 {
   font-family: "Font Awesome 5 Free";
   content: "\f004";
   width: 0;
-  height: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   font-weight: 900;
   position: absolute;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   overflow: hidden;
-}
-.hearts:hover {
-  color: #fff;
-  transition: 0.9s;
+  transition: width 0.9s ease-out;
+  font-size: 1.1em;
 }
 .hearts:hover::before {
   width: 100%;
-  height: 100%;
-  animation: heart-fill 1s ease-in-out;
 }
 
 .loader {
@@ -945,11 +946,12 @@ main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
   transform: translateX(-100%);
 }
 main #menu section:nth-child(n+2) article:hover span:last-child {
-  transform: scaleX(1);
+  animation: appear 400ms ease-in;
+  animation-fill-mode: both;
   opacity: 1;
 }
 main #menu section:nth-child(n+2) article:hover span:last-child i {
-  animation: loader-bar-rotate 300ms reverse linear;
+  animation: loader-bar-rotate 400ms reverse linear;
 }
 main #menu section:nth-child(n+2) article div {
   display: flex;
@@ -993,10 +995,8 @@ main #menu section:nth-child(n+2) article span:last-child {
   height: 100%;
   width: 60px;
   background-color: #99E2D0;
-  transform: scaleX(0);
   opacity: 0;
   transform-origin: right;
-  transition: transform 400ms ease-in-out;
 }
 main #menu section:nth-child(n+2) article span:last-child i {
   color: white;

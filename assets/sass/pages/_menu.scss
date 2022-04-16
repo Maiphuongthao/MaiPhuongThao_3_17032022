@@ -78,7 +78,16 @@ main {
           margin-bottom: 20px;
           padding-left: 10px;
           cursor: pointer;
-
+          &:hover {
+            span {
+              &:last-child {
+                transform: translateX(-100%);
+                i {
+                  animation: loader-bar-rotate 400ms reverse linear;
+                }
+              }
+            }
+          }
           span {
             &:nth-child(2) {
               display: flex;
@@ -98,22 +107,13 @@ main {
               height: 100%;
               width: 60px;
               background-color: $tertiary-color;
-              transition: transform 1s ease-in-out forwards;
+              transition: transform 1s ease-in-out;
               i {
                 color: white;
               }
             }
 
-            &:hover {
-              span {
-                &:last-child {
-                  transform: translateX(-100%);
-                  i {
-                    animation: loader-bar-rotate 400ms reverse linear;
-                  }
-                }
-              }
-            }
+          
 
             div {
               display: flex;

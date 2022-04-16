@@ -958,6 +958,12 @@ main #menu section:nth-child(n+2) article:nth-of-type(3) {
 main #menu section:nth-child(n+2) article:nth-of-type(4) {
   animation-delay: 1200ms;
 }
+main #menu section:nth-child(n+2) article:hover span:last-child {
+  transform: translateX(-100%);
+}
+main #menu section:nth-child(n+2) article:hover span:last-child i {
+  animation: loader-bar-rotate 400ms reverse linear;
+}
 main #menu section:nth-child(n+2) article span:nth-child(2) {
   display: flex;
   align-items: flex-end;
@@ -978,16 +984,10 @@ main #menu section:nth-child(n+2) article span:last-child {
   height: 100%;
   width: 60px;
   background-color: #99E2D0;
-  transition: transform 1s ease-in-out forwards;
+  transition: transform 1s ease-in-out;
 }
 main #menu section:nth-child(n+2) article span:last-child i {
   color: white;
-}
-main #menu section:nth-child(n+2) article span:hover span:last-child {
-  transform: translateX(-100%);
-}
-main #menu section:nth-child(n+2) article span:hover span:last-child i {
-  animation: loader-bar-rotate 400ms reverse linear;
 }
 main #menu section:nth-child(n+2) article span div {
   display: flex;

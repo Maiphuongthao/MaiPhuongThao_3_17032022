@@ -479,14 +479,6 @@ h3 {
     transform: scale(1);
   }
 }
-@keyframes appear {
-  0% {
-    transform: translateX(-60px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @keyframes loader-bar {
   0% {
     transform: rotate(0deg);
@@ -516,7 +508,7 @@ h3 {
 }
 @keyframes loading-time-gap {
   0% {
-    transform: translateY(-20%);
+    transform: translateY(20px);
     opacity: 0;
   }
   100% {
@@ -933,11 +925,8 @@ main #menu section:nth-child(n+2) h2::after {
   margin-top: 5px;
 }
 main #menu section:nth-child(n+2) article {
-  position: relative;
-  animation: loading-time-gap 1000ms ease-out 500ms;
-  width: 100%;
+  animation: loading-time-gap 1000ms ease-out;
   display: flex;
-  justify-content: space-between;
   background-color: #fff;
   height: 70px;
   box-shadow: 0 5px 8px #dddddd;
@@ -945,6 +934,7 @@ main #menu section:nth-child(n+2) article {
   margin-bottom: 20px;
   padding-left: 10px;
   cursor: pointer;
+  overflow: hidden;
 }
 main #menu section:nth-child(n+2) article:nth-of-type(1) {
   animation-delay: 300ms;
@@ -958,54 +948,65 @@ main #menu section:nth-child(n+2) article:nth-of-type(3) {
 main #menu section:nth-child(n+2) article:nth-of-type(4) {
   animation-delay: 1200ms;
 }
+main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
+  transform: translateX(-100%);
+}
 main #menu section:nth-child(n+2) article:hover span:last-child {
   transform: translateX(-100%);
 }
 main #menu section:nth-child(n+2) article:hover span:last-child i {
-  animation: loader-bar-rotate 400ms reverse linear;
+  animation: loader-bar-rotate 500ms reverse linear;
 }
-main #menu section:nth-child(n+2) article span:nth-child(2) {
+main #menu section:nth-child(n+2) article:hover div {
+  transform: translateX(-60px);
+}
+main #menu section:nth-child(n+2) article span {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  width: 60px;
-  height: 100%;
+  justify-content: flex-end;
+}
+main #menu section:nth-child(n+2) article span:nth-child(2) {
   padding-bottom: 13px;
   font-weight: 700;
   overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  margin-right: 20px;
+  width: 60px;
 }
 main #menu section:nth-child(n+2) article span:last-child {
-  margin-right: -60px;
+  margin-right: -70px;
   border-radius: 0 15px 15px 0;
   font-size: 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 60px;
+  width: 70px;
   background-color: #99E2D0;
-  transition: transform 1s ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 main #menu section:nth-child(n+2) article span:last-child i {
   color: white;
 }
-main #menu section:nth-child(n+2) article span div {
+main #menu section:nth-child(n+2) article div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  width: 100%;
   line-height: 1.5em;
-  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: transform 500ms ease-in-out;
 }
-main #menu section:nth-child(n+2) article span div * {
+main #menu section:nth-child(n+2) article div * {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-main #menu section:nth-child(n+2) article span div h3 {
+main #menu section:nth-child(n+2) article div h3 {
   font-size: 1.1em;
 }
-main #menu section:nth-child(n+2) article span div p {
+main #menu section:nth-child(n+2) article div p {
   font-weight: 300;
 }
 main #menu .btn {

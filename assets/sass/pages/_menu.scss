@@ -66,11 +66,9 @@ main {
               animation-delay: #{$i * 300}ms;
             }
           }
-          position: relative;
-          animation: loading-time-gap 1000ms ease-out 500ms;
-          width: 100%;
+          animation: loading-time-gap 1000ms ease-out;
           display: flex;
-          justify-content: space-between;
+      
           background-color: $white;
           height: 70px;
           @include shadow($light-grey, 10%);
@@ -78,61 +76,70 @@ main {
           margin-bottom: 20px;
           padding-left: 10px;
           cursor: pointer;
+          overflow:hidden;
           &:hover {
             span {
+              &:nth-child(2){
+                transform: translateX(-100%);
+              }
               &:last-child {
                 transform: translateX(-100%);
                 i {
-                  animation: loader-bar-rotate 400ms reverse linear;
+                  animation: loader-bar-rotate 500ms reverse linear;
                 }
               }
             }
+            div{
+              transform: translateX(-60px);
+            }
           }
           span {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
             &:nth-child(2) {
-              display: flex;
-              align-items: flex-end;
-              justify-content: center;
-              width: 60px;
-              height: 100%;
+              
               padding-bottom: 13px;
               font-weight: 700;
               overflow: hidden;
+              transition: transform 500ms ease-in-out;
+              margin-right:20px;
+              width: 60px;
             }
             &:last-child {
-              margin-right: -60px;
+              margin-right: -70px;
               border-radius: 0 15px 15px 0;
               font-size: 1.5em;
               @include display-center;
               height: 100%;
-              width: 60px;
+              width: 70px;
               background-color: $tertiary-color;
-              transition: transform 1s ease-in-out;
+              transition: transform 500ms ease-in-out;
               i {
                 color: white;
               }
             }
-
-          
-
-            div {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              height: 100%;
-              line-height: 1.5em;
-              min-width: 0;
-              * {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-              }
-              h3 {
-                font-size: $tel-text-size;
-              }
-              p {
-                font-weight: 300;
-              }
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            line-height: 1.5em;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: transform 500ms ease-in-out;
+        
+            * {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            h3 {
+              font-size: $tel-text-size;
+            }
+            p {
+              font-weight: 300;
             }
           }
         }

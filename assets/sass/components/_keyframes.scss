@@ -19,14 +19,6 @@
   }
 }
 
-@keyframes appear {
-  0% {
-    transform: translateX(-60px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
 @keyframes loader-bar {
   0% {
@@ -60,7 +52,7 @@
 
 @keyframes loading-time-gap {
   0% {
-    transform: translateY(-20%);
+    transform: translateY(20px);
     opacity: 0;
   }
   100% {

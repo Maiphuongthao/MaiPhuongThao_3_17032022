@@ -481,10 +481,10 @@ h3 {
 }
 @keyframes appear {
   0% {
-    transform: scaleX(0);
+    transform: translateX(-60px);
   }
   100% {
-    transform: scaleX(1);
+    transform: translateX(0);
   }
 }
 @keyframes loader-bar {
@@ -894,6 +894,10 @@ main #menu {
     margin-top: -70px;
   }
 }
+main #menu section {
+  /****/
+  /***/
+}
 main #menu section:first-child {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -912,6 +916,7 @@ main #menu section:nth-child(n+2) {
   margin-bottom: 30px;
   justify-content: center;
   width: 100%;
+  /***/
 }
 main #menu section:nth-child(n+2) h2 {
   text-transform: uppercase;
@@ -930,46 +935,6 @@ main #menu section:nth-child(n+2) h2::after {
 main #menu section:nth-child(n+2) article {
   position: relative;
   animation: loading-time-gap 1000ms ease-out 500ms;
-  animation-fill-mode: both;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  height: 70px;
-  box-shadow: 0 5px 8px #dddddd;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  cursor: pointer;
-  position: relative;
-  animation: loading-time-gap 1000ms ease-out 500ms;
-  animation-fill-mode: both;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  height: 70px;
-  box-shadow: 0 5px 8px #dddddd;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  cursor: pointer;
-  position: relative;
-  animation: loading-time-gap 1000ms ease-out 500ms;
-  animation-fill-mode: both;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  height: 70px;
-  box-shadow: 0 5px 8px #dddddd;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  cursor: pointer;
-  position: relative;
-  animation: loading-time-gap 1000ms ease-out 500ms;
-  animation-fill-mode: both;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -984,222 +949,15 @@ main #menu section:nth-child(n+2) article {
 main #menu section:nth-child(n+2) article:nth-of-type(1) {
   animation-delay: 300ms;
 }
-main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
-  transform: translateX(-100%);
-}
-main #menu section:nth-child(n+2) article:hover span:last-child {
-  animation: appear 400ms ease-in;
-  animation-fill-mode: both;
-  opacity: 1;
-}
-main #menu section:nth-child(n+2) article:hover span:last-child i {
-  animation: loader-bar-rotate 400ms reverse linear;
-}
-main #menu section:nth-child(n+2) article div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  line-height: 1.5em;
-  min-width: 0;
-}
-main #menu section:nth-child(n+2) article div * {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-main #menu section:nth-child(n+2) article div h3 {
-  font-size: 1.1em;
-}
-main #menu section:nth-child(n+2) article div p {
-  font-weight: 300;
-}
-main #menu section:nth-child(n+2) article span:nth-child(2) {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 60px;
-  height: 100%;
-  padding-bottom: 13px;
-  font-weight: 700;
-  overflow: hidden;
-  transform: translateX(0);
-  transition: transform 400ms linear;
-}
-main #menu section:nth-child(n+2) article span:last-child {
-  position: absolute;
-  right: 0;
-  border-radius: 0 15px 15px 0;
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 60px;
-  background-color: #99E2D0;
-  opacity: 0;
-  transform-origin: right;
-}
-main #menu section:nth-child(n+2) article span:last-child i {
-  color: white;
-}
 main #menu section:nth-child(n+2) article:nth-of-type(2) {
   animation-delay: 600ms;
-}
-main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
-  transform: translateX(-100%);
-}
-main #menu section:nth-child(n+2) article:hover span:last-child {
-  animation: appear 400ms ease-in;
-  animation-fill-mode: both;
-  opacity: 1;
-}
-main #menu section:nth-child(n+2) article:hover span:last-child i {
-  animation: loader-bar-rotate 400ms reverse linear;
-}
-main #menu section:nth-child(n+2) article div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  line-height: 1.5em;
-  min-width: 0;
-}
-main #menu section:nth-child(n+2) article div * {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-main #menu section:nth-child(n+2) article div h3 {
-  font-size: 1.1em;
-}
-main #menu section:nth-child(n+2) article div p {
-  font-weight: 300;
-}
-main #menu section:nth-child(n+2) article span:nth-child(2) {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 60px;
-  height: 100%;
-  padding-bottom: 13px;
-  font-weight: 700;
-  overflow: hidden;
-  transform: translateX(0);
-  transition: transform 400ms linear;
-}
-main #menu section:nth-child(n+2) article span:last-child {
-  position: absolute;
-  right: 0;
-  border-radius: 0 15px 15px 0;
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 60px;
-  background-color: #99E2D0;
-  opacity: 0;
-  transform-origin: right;
-}
-main #menu section:nth-child(n+2) article span:last-child i {
-  color: white;
 }
 main #menu section:nth-child(n+2) article:nth-of-type(3) {
   animation-delay: 900ms;
 }
-main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
-  transform: translateX(-100%);
-}
-main #menu section:nth-child(n+2) article:hover span:last-child {
-  animation: appear 400ms ease-in;
-  animation-fill-mode: both;
-  opacity: 1;
-}
-main #menu section:nth-child(n+2) article:hover span:last-child i {
-  animation: loader-bar-rotate 400ms reverse linear;
-}
-main #menu section:nth-child(n+2) article div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  line-height: 1.5em;
-  min-width: 0;
-}
-main #menu section:nth-child(n+2) article div * {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-main #menu section:nth-child(n+2) article div h3 {
-  font-size: 1.1em;
-}
-main #menu section:nth-child(n+2) article div p {
-  font-weight: 300;
-}
-main #menu section:nth-child(n+2) article span:nth-child(2) {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 60px;
-  height: 100%;
-  padding-bottom: 13px;
-  font-weight: 700;
-  overflow: hidden;
-  transform: translateX(0);
-  transition: transform 400ms linear;
-}
-main #menu section:nth-child(n+2) article span:last-child {
-  position: absolute;
-  right: 0;
-  border-radius: 0 15px 15px 0;
-  font-size: 1.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 60px;
-  background-color: #99E2D0;
-  opacity: 0;
-  transform-origin: right;
-}
-main #menu section:nth-child(n+2) article span:last-child i {
-  color: white;
-}
 main #menu section:nth-child(n+2) article:nth-of-type(4) {
   animation-delay: 1200ms;
 }
-main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
-  transform: translateX(-100%);
-}
-main #menu section:nth-child(n+2) article:hover span:last-child {
-  animation: appear 400ms ease-in;
-  animation-fill-mode: both;
-  opacity: 1;
-}
-main #menu section:nth-child(n+2) article:hover span:last-child i {
-  animation: loader-bar-rotate 400ms reverse linear;
-}
-main #menu section:nth-child(n+2) article div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  line-height: 1.5em;
-  min-width: 0;
-}
-main #menu section:nth-child(n+2) article div * {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-main #menu section:nth-child(n+2) article div h3 {
-  font-size: 1.1em;
-}
-main #menu section:nth-child(n+2) article div p {
-  font-weight: 300;
-}
 main #menu section:nth-child(n+2) article span:nth-child(2) {
   display: flex;
   align-items: flex-end;
@@ -1209,12 +967,9 @@ main #menu section:nth-child(n+2) article span:nth-child(2) {
   padding-bottom: 13px;
   font-weight: 700;
   overflow: hidden;
-  transform: translateX(0);
-  transition: transform 400ms linear;
 }
 main #menu section:nth-child(n+2) article span:last-child {
-  position: absolute;
-  right: 0;
+  margin-right: -60px;
   border-radius: 0 15px 15px 0;
   font-size: 1.5em;
   display: flex;
@@ -1223,13 +978,37 @@ main #menu section:nth-child(n+2) article span:last-child {
   height: 100%;
   width: 60px;
   background-color: #99E2D0;
-  opacity: 0;
-  transform-origin: right;
+  transition: transform 1s ease-in-out forwards;
 }
 main #menu section:nth-child(n+2) article span:last-child i {
   color: white;
 }
-main .btn {
+main #menu section:nth-child(n+2) article span:hover span:last-child {
+  transform: translateX(-100%);
+}
+main #menu section:nth-child(n+2) article span:hover span:last-child i {
+  animation: loader-bar-rotate 400ms reverse linear;
+}
+main #menu section:nth-child(n+2) article span div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  line-height: 1.5em;
+  min-width: 0;
+}
+main #menu section:nth-child(n+2) article span div * {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+main #menu section:nth-child(n+2) article span div h3 {
+  font-size: 1.1em;
+}
+main #menu section:nth-child(n+2) article span div p {
+  font-weight: 300;
+}
+main #menu .btn {
   align-self: center;
   margin-top: 20px;
 }

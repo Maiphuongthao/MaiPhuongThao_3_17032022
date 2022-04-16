@@ -21,10 +21,10 @@
 
 @keyframes appear {
   0% {
-    transform: scaleX(0);
+    transform: translateX(-60px);
   }
   100% {
-    transform: scaleX(1);
+    transform: translateX(0);
   }
 }
 

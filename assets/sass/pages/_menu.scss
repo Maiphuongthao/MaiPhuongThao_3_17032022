@@ -66,7 +66,7 @@ main {
               animation-delay: #{$i * 300}ms;
             }
           }
-          animation: loading-time-gap 1000ms ease-out;
+          animation: loading-time-gap 1050ms ease-out both;
           display: flex;
       
           background-color: $white;
@@ -80,7 +80,7 @@ main {
           &:hover {
             span {
               &:nth-child(2){
-                transform: translateX(-100%);
+                transform: translateX(-60px);
               }
               &:last-child {
                 transform: translateX(-100%);
@@ -90,29 +90,28 @@ main {
               }
             }
             div{
-              transform: translateX(-60px);
+              margin-right:70px;
             }
           }
           span {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
+            
             &:nth-child(2) {
-              
+              display: flex;
+            align-items: flex-end;
               padding-bottom: 13px;
               font-weight: 700;
               overflow: hidden;
               transition: transform 500ms ease-in-out;
-              margin-right:20px;
-              width: 60px;
+              min-width: 50px;
+              
             }
             &:last-child {
-              margin-right: -70px;
+              margin-right: -60px;
               border-radius: 0 15px 15px 0;
               font-size: 1.5em;
               @include display-center;
               height: 100%;
-              width: 70px;
+              min-width: 60px;
               background-color: $tertiary-color;
               transition: transform 500ms ease-in-out;
               i {
@@ -128,7 +127,7 @@ main {
             line-height: 1.5em;
             overflow: hidden;
             white-space: nowrap;
-            transition: transform 500ms ease-in-out;
+            transition:margin-right 500ms ease-in-out;
         
             * {
               overflow: hidden;

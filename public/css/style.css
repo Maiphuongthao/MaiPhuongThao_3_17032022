@@ -508,7 +508,7 @@ h3 {
 }
 @keyframes loading-time-gap {
   0% {
-    transform: translateY(20px);
+    transform: translateY(-10%);
     opacity: 0;
   }
   100% {
@@ -925,7 +925,7 @@ main #menu section:nth-child(n+2) h2::after {
   margin-top: 5px;
 }
 main #menu section:nth-child(n+2) article {
-  animation: loading-time-gap 1000ms ease-out;
+  animation: loading-time-gap 1050ms ease-out both;
   display: flex;
   background-color: #fff;
   height: 70px;
@@ -949,7 +949,7 @@ main #menu section:nth-child(n+2) article:nth-of-type(4) {
   animation-delay: 1200ms;
 }
 main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
-  transform: translateX(-100%);
+  transform: translateX(-60px);
 }
 main #menu section:nth-child(n+2) article:hover span:last-child {
   transform: translateX(-100%);
@@ -958,30 +958,26 @@ main #menu section:nth-child(n+2) article:hover span:last-child i {
   animation: loader-bar-rotate 500ms reverse linear;
 }
 main #menu section:nth-child(n+2) article:hover div {
-  transform: translateX(-60px);
-}
-main #menu section:nth-child(n+2) article span {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  margin-right: 70px;
 }
 main #menu section:nth-child(n+2) article span:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
   padding-bottom: 13px;
   font-weight: 700;
   overflow: hidden;
   transition: transform 500ms ease-in-out;
-  margin-right: 20px;
-  width: 60px;
+  min-width: 50px;
 }
 main #menu section:nth-child(n+2) article span:last-child {
-  margin-right: -70px;
+  margin-right: -60px;
   border-radius: 0 15px 15px 0;
   font-size: 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 70px;
+  min-width: 60px;
   background-color: #99E2D0;
   transition: transform 500ms ease-in-out;
 }
@@ -996,7 +992,7 @@ main #menu section:nth-child(n+2) article div {
   line-height: 1.5em;
   overflow: hidden;
   white-space: nowrap;
-  transition: transform 500ms ease-in-out;
+  transition: margin-right 500ms ease-in-out;
 }
 main #menu section:nth-child(n+2) article div * {
   overflow: hidden;

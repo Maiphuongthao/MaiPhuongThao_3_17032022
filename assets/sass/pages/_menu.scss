@@ -24,20 +24,20 @@ main {
       @include margin-destop-max;
       margin-top: -70px;
     }
-    section {
-      /************SECTION RESTAURANT NAME*********************/
-      &:first-child {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        h1 {
-          font-family: $font;
-          font-size: 1.5em;
-        }
+    /************SECTION RESTAURANT NAME*********************/
+    > div {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        font-family: $font;
+        font-size: 1.5em;
       }
+    }
+    section {
       /******************SECTION MENU**************************************/
       &:nth-child(n + 2) {
         display: flex;

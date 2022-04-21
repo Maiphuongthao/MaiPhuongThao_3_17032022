@@ -24,17 +24,30 @@
   }
 }
 
-@mixin before-bar($color){
-  content:"";
-            position:absolute;
-            bottom:5px;
-            background-color:$color;
-            width:10px;
-            height:10px;
-        box-shadow: 0 0 0 2px lighten($color, 5%),
-    0 0 0 4px lighten($color,15%),
-    0 0 0 5px lighten($color, 25%),
-    0 0 0 8px lighten($color,30%);
-        
+@mixin before-bar($color) {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  background-color: $color;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px lighten($color, 5%), 0 0 0 4px lighten($color, 15%),
+    0 0 0 5px lighten($color, 25%), 0 0 0 8px lighten($color, 30%);
+}
+
+
+@mixin loading-menu-mode($size) {
+  animation-fill-mode: forwards;
+  transform: translateY($size);
+  opacity: 0;
+}
+
+@mixin loading-effet($margin-left, $border-color, $color-bar) {
+  margin-left: $margin-left;
+  border: 5px solid $border-color;
+  &::before {
+    @include before-bar($color-bar);
+    animation: loader-bar-rotate 1000ms linear infinite;
+  }
 }
 

@@ -440,7 +440,7 @@ h3 {
   justify-content: center;
   align-items: center;
   position: relative;
-  transition-duration: 0.2s;
+  transition-duration: 500ms;
   background: linear-gradient(170deg, #FF79DA 1%, #9356DC 70%);
 }
 .btn:hover {
@@ -454,23 +454,12 @@ h3 {
   opacity: 0;
   width: 100%;
   height: 100%;
-  transition-duration: 0.3s;
+  transition-duration: 500ms;
   position: absolute;
   border-radius: 35px;
   box-shadow: 5px 8px 8px #d0d0d0;
 }
 
-@keyframes shadow-btn {
-  0% {
-    transform: translateY(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(360deg);
-    opacity: 0.8;
-    box-shadow: 0 5px 8px #b6b6b6;
-  }
-}
 @keyframes heart-fill {
   0% {
     transform: scale(0);
@@ -612,7 +601,7 @@ h3 {
 }
 .loader p {
   position: absolute;
-  bottom: 345px;
+  bottom: 400px;
   font-size: 1.5em;
   font-weight: 700;
   letter-spacing: 0.5em;
@@ -858,6 +847,9 @@ footer nav ul a i {
   line-height: 1.5em;
 }
 
+main {
+  /******************IMG MENU PAGE******************************************/
+}
 main figure img {
   object-fit: cover;
   width: 100%;
@@ -887,8 +879,8 @@ main #menu {
   }
 }
 main #menu section {
-  /****/
-  /***/
+  /************SECTION RESTAURANT NAME*********************/
+  /******************SECTION MENU**************************************/
 }
 main #menu section:first-child {
   margin-top: 10px;
@@ -908,7 +900,7 @@ main #menu section:nth-child(n+2) {
   margin-bottom: 30px;
   justify-content: center;
   width: 100%;
-  /***/
+  /******************ARTICLE OF MENU******************************************/
 }
 main #menu section:nth-child(n+2) h2 {
   text-transform: uppercase;
@@ -935,6 +927,8 @@ main #menu section:nth-child(n+2) article {
   padding-left: 10px;
   cursor: pointer;
   overflow: hidden;
+  /**************PRICES AND CHECKED ANIMATION ***************************************/
+  /************TEXT IN MENU****************************************/
 }
 main #menu section:nth-child(n+2) article:nth-of-type(1) {
   animation-delay: 300ms;

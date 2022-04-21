@@ -38,8 +38,3 @@
         
 }
 
-@mixin loading-menu-mode($size){
-  animation-fill-mode: forwards;
-        transform: translateY($size);
-        opacity:0;
-}

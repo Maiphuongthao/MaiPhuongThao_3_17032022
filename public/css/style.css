@@ -1,1 +1,1008 @@
-﻿/*! normalize.css v3.0.2 | MIT License | git.io/normalize */@import"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap";html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*,figure{box-sizing:border-box;margin:0;padding:0}body{font-family:"Roboto",sans-serif;color:#000}h1,h2{font-size:1.5em}h2{margin-bottom:25px}a{color:#000;text-decoration:none}h3{font-size:1.2em}.btn{margin-top:30px;margin-bottom:50px;height:50px;width:210px;border-radius:35px;box-shadow:0 5px 8px #d0d0d0;color:#fff;font-weight:500;display:flex;justify-content:center;align-items:center;position:relative;transition-duration:.2s;background:linear-gradient(170deg, #ff79da 1%, #9356dc 70%)}.btn:hover{opacity:.85}.btn:hover::before{opacity:1}.btn::before{content:"";opacity:0;width:100%;height:100%;transition-duration:.3s;position:absolute;border-radius:35px;box-shadow:5px 8px 8px #d0d0d0}@keyframes shadow-btn{0%{transform:translateY(0deg);opacity:1}100%{transform:translateY(360deg);opacity:.8;box-shadow:0 5px 8px #b6b6b6}}@keyframes heart-fill{0%{transform:scale(0)}100%{transform:scale(1)}}@keyframes loader-bar{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes loader-bar-rotate{0%{transform:rotate(360deg)}100%{transform:rotate(0deg)}}@keyframes loading{0%{opacity:1;transform:scale(1)}100%{transform:scale(2);opacity:0;z-index:-100}}@keyframes loading-time-gap{0%{transform:translateY(-10%);opacity:0}100%{transform:translateY(0);opacity:1}}.hearts{display:flex;justify-content:center;align-items:center;font-size:1.6em;position:relative;-webkit-background-clip:text;background-clip:text;overflow:hidden;cursor:pointer;color:#000;width:60px}.hearts::before{display:flex;justify-content:center;align-items:center;background:linear-gradient(70deg, #ff79da 20%, #9356dc);font-family:"Font Awesome 5 Free";content:"";width:0;font-weight:900;position:absolute;-webkit-background-clip:text;background-clip:text;color:transparent;overflow:hidden;transition:width .9s ease-out;font-size:1.1em}.hearts:hover::before{width:100%}.loader{display:flex;justify-content:center;align-items:center;background-color:#fff;width:100%;height:100%;position:fixed;z-index:1000;animation:loading 1s linear 1s forwards}.loader .loader-bar{position:relative;height:100px;width:100px;border-radius:50%;box-shadow:0 0 2px 4px #c9abee,0 0 4px 8px #ffdff6,0 0 5px 10px #e8f9f5;animation:loader-bar 2s linear infinite}.loader .loader-bar:nth-child(1){margin-left:0;border:5px solid #99e2d0}.loader .loader-bar:nth-child(1)::before{content:"";position:absolute;bottom:5px;background-color:#9356dc;width:10px;height:10px;box-shadow:0 0 0 2px #a16be0,0 0 0 4px #bc95e9,0 0 0 5px #d7c0f2,0 0 0 8px #e4d5f6;animation:loader-bar-rotate 1000ms linear infinite}.loader .loader-bar:nth-child(2){margin-left:-35px;border:5px solid #9356dc}.loader .loader-bar:nth-child(2)::before{content:"";position:absolute;bottom:5px;background-color:#ff79da;width:10px;height:10px;box-shadow:0 0 0 2px #ff93e1,0 0 0 4px #ffc6ef,0 0 0 5px #fff9fd,0 0 0 8px #fff;animation:loader-bar-rotate 1000ms linear infinite}.loader .loader-bar:nth-child(3){margin-left:-35px;border:5px solid #ff79da}.loader .loader-bar:nth-child(3)::before{content:"";position:absolute;bottom:5px;background-color:#99e2d0;width:10px;height:10px;box-shadow:0 0 0 2px #ade8d9,0 0 0 4px #d5f3eb,0 0 0 5px #fcfefe,0 0 0 8px #fff;animation:loader-bar-rotate 1000ms linear infinite}.loader p{position:absolute;bottom:345px;font-size:1.5em;font-weight:700;letter-spacing:.5em;background:linear-gradient(#ff79da, #9356dc, #99e2d0);-webkit-background-clip:text;background-clip:text;color:transparent}header{display:flex;display:flex;justify-content:center;align-items:center;height:75px;position:relative}header a i{position:absolute;left:20px;font-size:1.3em;top:25px}header img{height:30px}@media screen and (min-width: 992px){header{max-width:1180px;margin:0 auto}}footer{background-color:#353535;color:#fff}footer nav{padding:20px}@media screen and (min-width: 992px){footer nav{max-width:1180px;margin:0 auto}}@media screen and (min-width: 1200px){footer nav{padding-left:20px}}footer nav h3{margin-top:20px;font-family:"Shrikhand",cursive}footer nav ul{list-style:none;margin:20px 0;line-height:1.6em}footer nav ul li:nth-child(3),footer nav ul li:last-child{font-weight:300}footer nav ul a{color:#fff}footer nav ul a i{margin-right:15px;width:7px;font-size:.9em}#location{background-color:#eaeaea;height:60px;display:flex;justify-content:center;align-items:center;box-shadow:0 3px 3px inset #d1d1d1}#location p{font-weight:500;font-size:1.1em;color:#353535}#location p i{padding-right:15px}#about-us{display:flex;text-align:center;flex-direction:column;align-items:center;background-color:#f6f6f6}#about-us h1{margin:40px 20px 20px}#about-us p{font-size:1.1em;font-weight:300}#functionning{padding:40px 20px;width:100%}@media screen and (min-width: 992px){#functionning{max-width:1180px;margin:0 auto}}#functionning ol{counter-reset:my-counter;display:flex;flex-direction:column}@media screen and (min-width: 576px)and (max-width: 768px){#functionning ol{padding:0 50px}}@media screen and (min-width: 768px){#functionning ol{flex-direction:row;justify-content:space-between;gap:20px;align-items:center;width:100%;padding:30px 10px}}#functionning ol li{margin-left:10px;margin-bottom:25px;display:flex;align-items:center;height:70px;width:100%;background:#f6f6f6;border-radius:25px;align-items:center;counter-increment:my-counter;font-weight:500;box-shadow:0 5px 8px #eee}#functionning ol li::before{content:counter(my-counter);display:flex;justify-content:center;align-items:center;min-height:30px;min-width:30px;background-color:#9356dc;border-radius:50%;color:#fff;margin-right:10px;position:relative;right:15px}#functionning ol li:hover{background-color:#f5ecff;box-shadow:0 5px 8px #e2e2e2}#functionning ol li:hover>i{color:#9356dc}#functionning ol li i{color:#7e7e7e;font-size:1.1em;margin-right:20px}#restaurants{background-color:#f6f6f6}#restaurants>div{padding:50px 20px}@media screen and (min-width: 992px){#restaurants>div{display:flex;flex-flow:row wrap;justify-content:space-between;max-width:1180px;margin:0 auto}}#restaurants>div h2{flex-basis:100%}#restaurants>div article{margin-bottom:25px;position:relative}@media screen and (min-width: 992px){#restaurants>div article{flex-basis:49%}}#restaurants>div article figure{width:100%;display:flex;flex-direction:column;box-shadow:0 5px 8px #ececec;border-radius:15px;background-color:#fff}#restaurants>div article figure span:first-child{position:absolute;right:15px;top:15px;padding:6px 13px;color:#1f9577;background-color:#99e2d0;font-size:.9em;font-weight:500;border-radius:3px}#restaurants>div article figure img{object-fit:cover;height:150px;width:100%;border-radius:18px 18px 0 0;object-position:50% 60%}@media screen and (min-width: 768px){#restaurants>div article figure img{height:200px}}#restaurants>div article figure figcaption{height:60px;display:flex;justify-content:space-between;align-items:center;padding:40px 15px}#restaurants>div article figure figcaption p{font-weight:300;line-height:1.5em}main figure img{object-fit:cover;width:100%;height:250px}@media screen and (min-width: 768px){main figure img{height:350px}}main #menu{position:relative;z-index:1;background-color:#f6f6f6;border-radius:35px 35px 0 0;padding:20px;margin-top:-50px;display:flex;flex-direction:column;justify-content:center}@media screen and (min-width: 992px){main #menu{max-width:1180px;margin:0 auto;margin-top:-70px}}main #menu>div{margin-top:10px;margin-bottom:20px;width:100%;display:flex;justify-content:space-between;align-items:center}main #menu>div h1{font-family:"Shrikhand",cursive;font-size:1.5em}main #menu section:nth-child(n+2){display:flex;flex-direction:column;margin-bottom:30px;justify-content:center;width:100%}main #menu section:nth-child(n+2) h2{text-transform:uppercase;font-size:1em;font-weight:300;margin-bottom:15px}main #menu section:nth-child(n+2) h2::after{content:"";background-color:#99e2d0;width:40px;height:3px;display:flex;margin-top:5px}main #menu section:nth-child(n+2) article{animation:loading-time-gap 1050ms ease-out both;display:flex;background-color:#fff;height:70px;box-shadow:0 5px 8px #ddd;border-radius:15px;margin-bottom:20px;padding-left:10px;cursor:pointer;overflow:hidden}main #menu section:nth-child(n+2) article:nth-of-type(1){animation-delay:300ms}main #menu section:nth-child(n+2) article:nth-of-type(2){animation-delay:600ms}main #menu section:nth-child(n+2) article:nth-of-type(3){animation-delay:900ms}main #menu section:nth-child(n+2) article:nth-of-type(4){animation-delay:1200ms}main #menu section:nth-child(n+2) article:hover span:nth-child(2){transform:translateX(-60px)}main #menu section:nth-child(n+2) article:hover span:last-child{transform:translateX(-100%)}main #menu section:nth-child(n+2) article:hover span:last-child i{animation:loader-bar-rotate 500ms reverse linear}main #menu section:nth-child(n+2) article:hover div{margin-right:70px}main #menu section:nth-child(n+2) article span:nth-child(2){display:flex;align-items:flex-end;padding-bottom:13px;font-weight:700;overflow:hidden;transition:transform 500ms ease-in-out;min-width:50px}main #menu section:nth-child(n+2) article span:last-child{margin-right:-60px;border-radius:0 15px 15px 0;font-size:1.5em;display:flex;justify-content:center;align-items:center;height:100%;min-width:60px;background-color:#99e2d0;transition:transform 500ms ease-in-out}main #menu section:nth-child(n+2) article span:last-child i{color:#fff}main #menu section:nth-child(n+2) article div{display:flex;flex-direction:column;justify-content:center;width:100%;line-height:1.5em;overflow:hidden;white-space:nowrap;transition:margin-right 500ms ease-in-out}main #menu section:nth-child(n+2) article div *{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}main #menu section:nth-child(n+2) article div h3{font-size:1.1em}main #menu section:nth-child(n+2) article div p{font-weight:300}main #menu .btn{align-self:center;margin-top:20px}/*# sourceMappingURL=style.css.map */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+   * Remove default margin.
+   */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+     ========================================================================== */
+/**
+   * Correct `block` display not defined for any HTML5 element in IE 8/9.
+   * Correct `block` display not defined for `details` or `summary` in IE 10/11
+   * and Firefox.
+   * Correct `block` display not defined for `main` in IE 11.
+   */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+   * 1. Correct `inline-block` display not defined in IE 8/9.
+   * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+   */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+   * Prevent modern browsers from displaying `audio` without controls.
+   * Remove excess height in iOS 5 devices.
+   */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+   * Address `[hidden]` styling not present in IE 8/9/10.
+   * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+   */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+     ========================================================================== */
+/**
+   * Remove the gray background color from active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * Improve readability when focused and also mouse hovered in all browsers.
+   */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+   */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+   * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+   */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+   * Address styling not present in Safari and Chrome.
+   */
+dfn {
+  font-style: italic;
+}
+
+/**
+   * Address variable `h1` font-size and margin within `section` and `article`
+   * contexts in Firefox 4+, Safari, and Chrome.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+   * Address styling not present in IE 8/9.
+   */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+   * Address inconsistent and variable font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+img {
+  border: 0;
+}
+
+/**
+   * Correct overflow not hidden in IE 9/10/11.
+   */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * Address margin not present in IE 8/9 and Safari.
+   */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+   * Address differences between Firefox and other browsers.
+   */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+   * Contain overflow in all browsers.
+   */
+pre {
+  overflow: auto;
+}
+
+/**
+   * Address odd `em`-unit font size rendering in all browsers.
+   */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * Known limitation: by default, Chrome and Safari on OS X allow very limited
+   * styling of `select`, unless a `border` property is set.
+   */
+/**
+   * 1. Correct color not being inherited.
+   *    Known issue: affects color of disabled elements.
+   * 2. Correct font properties not being inherited.
+   * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+   * Address `overflow` set to `hidden` in IE 8/9/10/11.
+   */
+button {
+  overflow: visible;
+}
+
+/**
+   * Address inconsistent `text-transform` inheritance for `button` and `select`.
+   * All other form control elements do not inherit `text-transform` values.
+   * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+   * Correct `select` style inheritance in Firefox.
+   */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+   *    and `video` controls.
+   * 2. Correct inability to style clickable `input` types in iOS.
+   * 3. Improve usability and consistency of cursor style between image-type
+   *    `input` and others.
+   */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+   * Re-set default cursor for disabled elements.
+   */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+   * Remove inner padding and border in Firefox 4+.
+   */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+   * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+   * the UA stylesheet.
+   */
+input {
+  line-height: normal;
+}
+
+/**
+   * It's recommended that you don't attempt to style these elements.
+   * Firefox's implementation doesn't respect box-sizing, padding, or width.
+   *
+   * 1. Address box sizing set to `content-box` in IE 8/9/10.
+   * 2. Remove excess padding in IE 8/9/10.
+   */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+   * `font-size` values of the `input`, it causes the cursor style of the
+   * decrement button to change from `default` to `text`.
+   */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+   * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+   *    (include `-moz` to future-proof).
+   */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * Define consistent border, margin, and padding.
+   */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+   * 1. Correct `color` not being inherited in IE 8/9/10/11.
+   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+   */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Remove default vertical scrollbar in IE 8/9/10/11.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * Don't inherit the `font-weight` (applied by a rule above).
+   * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+   */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+     ========================================================================== */
+/**
+   * Remove most spacing between table cells.
+   */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+*,
+figure {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+h1,
+h2 {
+  font-size: 1.5em;
+}
+
+h2 {
+  margin-bottom: 25px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+.btn {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  height: 50px;
+  width: 210px;
+  border-radius: 35px;
+  box-shadow: 0 5px 8px #d0d0d0;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition-duration: 0.2s;
+  background: linear-gradient(170deg, #ff79da 1%, #9356dc 70%);
+}
+.btn:hover {
+  opacity: 0.85;
+}
+.btn:hover::before {
+  opacity: 1;
+}
+.btn::before {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.3s;
+  position: absolute;
+  border-radius: 35px;
+  box-shadow: 5px 8px 8px #d0d0d0;
+}
+
+@keyframes heart-fill {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-bar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-bar-rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    z-index: -100;
+  }
+}
+@keyframes loading-time-gap {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.hearts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  position: relative;
+  -webkit-background-clip: text;
+  background-clip: text;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+  width: 60px;
+}
+.hearts::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(70deg, #ff79da 20%, #9356dc);
+  font-family: "Font Awesome 5 Free";
+  content: "\f004";
+  width: 0;
+  font-weight: 900;
+  position: absolute;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  overflow: hidden;
+  transition: width 0.9s ease-out;
+  font-size: 1.1em;
+}
+.hearts:hover::before {
+  width: 100%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  animation: loading 1s linear 1s forwards;
+}
+.loader .loader-bar {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 4px #c9abee, 0 0 4px 8px #ffdff6, 0 0 5px 10px #e8f9f5;
+  animation: loader-bar 2s linear infinite;
+}
+.loader .loader-bar:nth-child(1) {
+  margin-left: 0;
+  border: 5px solid #99e2d0;
+}
+.loader .loader-bar:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  background-color: #9356dc;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px #a16be0, 0 0 0 4px #bc95e9, 0 0 0 5px #d7c0f2, 0 0 0 8px #e4d5f6;
+  animation: loader-bar-rotate 1000ms linear infinite;
+}
+.loader .loader-bar:nth-child(2) {
+  margin-left: -35px;
+  border: 5px solid #9356dc;
+}
+.loader .loader-bar:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  background-color: #ff79da;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px #ff93e1, 0 0 0 4px #ffc6ef, 0 0 0 5px #fff9fd, 0 0 0 8px white;
+  animation: loader-bar-rotate 1000ms linear infinite;
+}
+.loader .loader-bar:nth-child(3) {
+  margin-left: -35px;
+  border: 5px solid #ff79da;
+}
+.loader .loader-bar:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  background-color: #99e2d0;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 0 2px #ade8d9, 0 0 0 4px #d5f3eb, 0 0 0 5px #fcfefe, 0 0 0 8px white;
+  animation: loader-bar-rotate 1000ms linear infinite;
+}
+.loader p {
+  position: absolute;
+  bottom: 345px;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  background: linear-gradient(#ff79da, #9356dc, #99e2d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  position: relative;
+}
+header a i {
+  position: absolute;
+  left: 20px;
+  font-size: 1.3em;
+  top: 25px;
+}
+header img {
+  height: 30px;
+}
+@media screen and (min-width: 992px) {
+  header {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+}
+footer nav {
+  padding: 20px;
+}
+@media screen and (min-width: 992px) {
+  footer nav {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer nav {
+    padding-left: 20px;
+  }
+}
+footer nav h3 {
+  margin-top: 20px;
+  font-family: "Shrikhand", cursive;
+}
+footer nav ul {
+  list-style: none;
+  margin: 20px 0;
+  line-height: 1.6em;
+}
+footer nav ul li:nth-child(3), footer nav ul li:last-child {
+  font-weight: 300;
+}
+footer nav ul a {
+  color: #fff;
+}
+footer nav ul a i {
+  margin-right: 15px;
+  width: 7px;
+  font-size: 0.9em;
+}
+
+#location {
+  background-color: #eaeaea;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 3px inset #d1d1d1;
+}
+#location p {
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #353535;
+}
+#location p i {
+  padding-right: 15px;
+}
+
+#about-us {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+#about-us h1 {
+  margin: 40px 20px 20px;
+}
+#about-us p {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+#functionning {
+  padding: 40px 20px;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  #functionning {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+#functionning ol {
+  counter-reset: my-counter;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #functionning ol {
+    padding: 0 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #functionning ol {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 30px 10px;
+  }
+}
+#functionning ol li {
+  margin-left: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background: #f6f6f6;
+  border-radius: 25px;
+  align-items: center;
+  counter-increment: my-counter;
+  font-weight: 500;
+  box-shadow: 0 5px 8px #eeeeee;
+}
+#functionning ol li::before {
+  content: counter(my-counter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  min-width: 30px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 10px;
+  position: relative;
+  right: 15px;
+}
+#functionning ol li:hover {
+  background-color: #f5ecff;
+  box-shadow: 0 5px 8px #e2e2e2;
+}
+#functionning ol li:hover > i {
+  color: #9356dc;
+}
+#functionning ol li i {
+  color: #7e7e7e;
+  font-size: 1.1em;
+  margin-right: 20px;
+}
+
+#restaurants {
+  background-color: #f6f6f6;
+}
+#restaurants > div {
+  padding: 50px 20px;
+}
+@media screen and (min-width: 992px) {
+  #restaurants > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+#restaurants > div h2 {
+  flex-basis: 100%;
+}
+#restaurants > div article {
+  margin-bottom: 25px;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  #restaurants > div article {
+    flex-basis: 49%;
+  }
+}
+#restaurants > div article figure {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 8px #ececec;
+  border-radius: 15px;
+  background-color: #fff;
+}
+#restaurants > div article figure span:first-child {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 6px 13px;
+  color: #1f9577;
+  background-color: #99e2d0;
+  font-size: 0.9em;
+  font-weight: 500;
+  border-radius: 3px;
+}
+#restaurants > div article figure img {
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  object-position: 50% 60%;
+}
+@media screen and (min-width: 768px) {
+  #restaurants > div article figure img {
+    height: 200px;
+  }
+}
+#restaurants > div article figure figcaption {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 15px;
+}
+#restaurants > div article figure figcaption p {
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+main {
+  /******************IMG MENU PAGE******************************************/
+}
+main figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+@media screen and (min-width: 768px) {
+  main figure img {
+    height: 350px;
+  }
+}
+main #menu {
+  position: relative;
+  z-index: 1;
+  background-color: #f6f6f6;
+  border-radius: 35px 35px 0 0;
+  padding: 20px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /************SECTION RESTAURANT NAME*********************/
+}
+@media screen and (min-width: 992px) {
+  main #menu {
+    max-width: 1180px;
+    margin: 0 auto;
+    margin-top: -70px;
+  }
+}
+main #menu > div {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #menu > div h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+}
+main #menu section {
+  /******************SECTION MENU**************************************/
+}
+main #menu section:nth-child(n+2) {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  justify-content: center;
+  width: 100%;
+  /******************ARTICLE OF MENU******************************************/
+}
+main #menu section:nth-child(n+2) h2 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+main #menu section:nth-child(n+2) h2::after {
+  content: "";
+  background-color: #99e2d0;
+  width: 40px;
+  height: 3px;
+  display: flex;
+  margin-top: 5px;
+}
+main #menu section:nth-child(n+2) article {
+  animation: loading-time-gap 1050ms ease-out both;
+  display: flex;
+  background-color: #fff;
+  height: 70px;
+  box-shadow: 0 5px 8px #dddddd;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  /**************PRICES AND CHECKED ANIMATION ***************************************/
+  /************TEXT IN MENU****************************************/
+}
+main #menu section:nth-child(n+2) article:nth-of-type(1) {
+  animation-delay: 300ms;
+}
+main #menu section:nth-child(n+2) article:nth-of-type(2) {
+  animation-delay: 600ms;
+}
+main #menu section:nth-child(n+2) article:nth-of-type(3) {
+  animation-delay: 900ms;
+}
+main #menu section:nth-child(n+2) article:nth-of-type(4) {
+  animation-delay: 1200ms;
+}
+main #menu section:nth-child(n+2) article:hover span:nth-child(2) {
+  transform: translateX(-60px);
+}
+main #menu section:nth-child(n+2) article:hover span:last-child {
+  transform: translateX(-100%);
+}
+main #menu section:nth-child(n+2) article:hover span:last-child i {
+  animation: loader-bar-rotate 500ms reverse linear;
+}
+main #menu section:nth-child(n+2) article:hover div {
+  margin-right: 70px;
+}
+main #menu section:nth-child(n+2) article span:nth-child(2) {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 13px;
+  font-weight: 700;
+  overflow: hidden;
+  transition: transform 500ms ease-in-out;
+  min-width: 50px;
+}
+main #menu section:nth-child(n+2) article span:last-child {
+  margin-right: -60px;
+  border-radius: 0 15px 15px 0;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-width: 60px;
+  background-color: #99e2d0;
+  transition: transform 500ms ease-in-out;
+}
+main #menu section:nth-child(n+2) article span:last-child i {
+  color: white;
+}
+main #menu section:nth-child(n+2) article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  line-height: 1.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: margin-right 500ms ease-in-out;
+}
+main #menu section:nth-child(n+2) article div * {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+main #menu section:nth-child(n+2) article div h3 {
+  font-size: 1.1em;
+}
+main #menu section:nth-child(n+2) article div p {
+  font-weight: 300;
+}
+main #menu .btn {
+  align-self: center;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
